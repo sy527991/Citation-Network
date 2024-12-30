@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xml_data</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 100);
+      }
+
+      a:hover {
+        color: rgba(13, 36, 242, 0.9);
+      }
+
+      ul {
+        list-style-type: none; /*Removes the bullet points*/
+        margin: 0; /*moves list up*/
+        padding: 0; /*moved the list to the left, against the left side*/
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /*keeps the navigation bar at the top of the page when scrolling*/
+        top: 0; /*top and width tell where the navigation bar should stay. If you wanted it fixed at the bottom you'd type bottom instead of top*/
+        width: 100%;
+      }
+
+      li {
+        float: left; /*put everything on one line*/
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px; /*spaced the words out*/
+        text-decoration: none; /*removed the underline from each word*/
+      }
+
+      li a:hover {
+        background-color: #111; /*makes it so the color changes behind each word when you hover over it*/
+      }
+
+      .Contact-Button {
+        position: relative;
+        display: block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 10px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+      .img {
+        width: 70%
+      }
+      footer {
+        text-align: right;
+      }
+
+      #grid {
+        width: calc(100% - 20vmin);
+        aspect-ratio: 16 / 7;
+        background: linen;
+        display: grid;
+        grid-template-columns: 1fr 0fr 1fr;
+        place-items: center;
+        outline: 2px solid #804a00;
+        /* border-radius: 5vmin; */
+        box-shadow: 0 1rem 2rem -1rem rgba(68 50 4 / 1);
+        overflow: hidden;
+      }
+      .left,
+      .right {
+        width: 600px;
+        height: 600px;
+        background-size: cover;
+        background-position: center;
+        transform-origin: center;
+      }
+      .left {
+        background-image: url('https://dh.aks.ac.kr/~kimseoyun/icon/xml.jpg');
+        border-right: 1px solid #804a00;
+      }
+      .right {
+        background-image: url('https://dh.aks.ac.kr/~kimseoyun/icon/tei.jpg');
+        border-left: 1px solid #804a00;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid rgb(0, 0, 16);
+        border-collapse: collapse;
+      }
+
+      pre {
+        background-color: rgba(49, 8, 8, 0.75);
+        border-left: 0.5rem solid rgba(196, 191, 191, 0.75);
+        font-size: 15px;
+        color: rgba(200, 187, 187, 0.983);
+        margin: 0;
+        padding: 1rem;
+        width: 80%
+      }
+      /* & code {  
+        background-color: rgba(251, 175, 93, 0.25);
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        display: inline-block;
+        margin: 0 0.25rem;
+        padding: 0 0.25rem;
+      }*/
+      blockquote {
+        background: #eee
+          url(http://www.webcreatorbox.com/sample/images/quote.gif) no-repeat
+          10px 10px;
+        padding: 25px;
+        font-family: Sans-Serif;
+      }  
+      .content {
+        padding: 15px;
+        background-color: #ffffff;
+        margin: 15px;
+      }
+      .container {
+        max-width: 1200px !important;
+        margin: 100px 0;
+        font-family: 'Open Sans';
+      }
+
+      .container {
+        box-sizing: border-box;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/preface.html">Preface</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/citation.html">Citation</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/xml_data.html">XML</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/table_data.html">Data</a>
+      </li>
+  
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/analysis.html">Analysis</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/archive.html">archive</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/references.html">References</a>
+      </li>
+
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+          <a href="#">Link 6</a>
+        </div>
+      </div>
+      <li style="float: right">
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/about.html">About</a>
+      </li>
+    </ul>
+    <img src="https://dh.aks.ac.kr/~kimseoyun/icon/confucius.jpg" />
+
+    <div class="container-fluid content">
+    <h1 align="center">XML 데이터 설계</h1>
+    <p>
+      이제는 단순히 방대한 데이터를 저장하고, 저장된 텍스트에 대한 문자열 검색 서비스를 제공하는 종래의 고전자료 DB 수준을 넘어서서 텍스트 속의 문맥 요소를 식별하고 이를 매개로 다른 DB의 관련 자료를 찾아서 제공해 줄 수 있는 기능의 발전된 데이터베이스가 필요하다. 이를 ‘시맨틱(semantic) 데이터베이스’라고 하는데, 이 모델은 텍스트를 독자의 관심과 요구에 따라 다양한 형태로 편성할 수 있게 하고, 이를 통해 효과적으로 텍스트 속의 지식에 접근할 수 있도록 한다.
+      본 연구는 바로 이러한 『논어』주석 시맨틱 데이터베이스를 구축하기 위한 것이다. 이를 위해 먼저 기존의 인용 분류체계를 참고하여 조선시대 논어 주석에 맞는 새로운 인용 분류체계를 만들고, 이를 적용한 인용 관계 데이터를 설계하고 Gephi를 이용해 시각화하였다. 그리고 이렇게 만들어진 데이터들을 웹에서 공유하고, 텍스트와 네트워크 그래프를 모두 아카이브하여 여러 연구자들에게 공유하고, 또 기회가 된다면 협업을 통해 연구를 동아시아의 경학으로 확장시켜 나갈 계획이다. 
+      </p>
+      <p> 
+      인문학은 최종적인 결론이나 답을 정하는 일이 아니고 의미 있는 것을 부단히 찾아가며 새로운 사실의 발견과 확인을 통해 예전에 알았던 부분적인 지식을 확장해 가는 ‘상시 진행형’인 노력이다. 고전 문헌 자료의 전산화는 일회성의 작업으로 원시자료의 디지털화가 완성되는 것이 아니라, 자료 분석을 통한 새로운 정보 요소의 발굴이 지속적으로 이어져야 하는 성격의 일이기 때문에, 자료 구조의 확장이나 변형의 유연성을 최대한 보장하는 XML이 도입되어 적용하는 것이 특히 유용하다. 
+      이에 본 연구에서는 조선시대 논어 주석의 인용 관계를 살피기 위하여 성균관대학교 대동문화연구원 '한국경학자료시스템'의 XML 문서를 활용한다. 한국경학자료시스템은 2004년에 구축된 조선시대의 역대 경학자료를 집성한 데이터베이스이고, XML은 원전의 텍스트를 그대로 보존하면서 저장·분석·공유할 수 있는 마크업 언어이다. 본 연구는 경학자료 DB구축 당시 설계된 기존의 XML 문서에 인용 양상에 관한 태그를 추가함으로써, 주석간의 인용관계를 파악할 수 있도록 재사용하는 것이다.
+    </p>
+    <h2>기존의 XML 스키마 검토</h2>
+    <p>『한국경학자료집성』의 DB화를 실현시키기 위하여, 2004년도 지식정보자원 지정신청 안내에 따라, 성균관대학교 동아시아학술원 존경각에서는 ‘한국경학자료 DB 구축사업’이라는 사업명으로 사업계획서를 제출하였고, 이 해에 사업권을 획득하여 사업이 시작되었다. 이때부터 ‘한국경학자료시스템’이라는 명칭의 사이트가 개설되었으며, 2009년까지 『한국경학자료집성』의 90% 이상을 DB화하여 한문고전을 공부하는 연구자들에게 한국의 경학자료에 대한 열람을 무상으로 제공하고 있다. 이와 관련하여, 「한국유학자료(韓國儒學資料)의 회집(匯集)과 전산화(電算化)」라는 논문에서는 한국경학자료시스템 구축을 위한 전단계로 『한국경학자료집성』을 어떻게 분석하였는지 분석표를 제시하고 있으며,  분석표에 있는 요소를 반영하여 경학자료 시스템을 구현하였다.
+      경학자료 분석은 크게 서지사항, 서발문, 목록, 범례, 인용인명 또는 서명, 원문으로 나눠지는데, 
+      여기에서는 원문 요소에 관해서만 살펴보도록 한다. 
+      아래의 그림은 원문 인스턴스에 해당하는 DTD 개념도인데, 원문 요소 아래에 
+      원문내서지, 편명, 편명서문, 내용, 편명발문이라는 하위 요소가 있으며, 내용은 또 장으로(학이편의 경우 학이 제16장), 
+      장은 다시 원문내경문과 중국주석, 그리고 주석으로 구분된다.</p>
+      <div class="img" >
+      <img src="https://dh.aks.ac.kr/~kimseoyun/icon/xml_6.png" /> 
+    </div>
+      <p>
+      아래의 그림은 김장생(金長生, 1548~1631) 『경서변의(經書辨疑)·논어(論語)』의 XML문서인데, 
+      ‘학이12장’의 <장> 요소에 제목과 경문ID, 시작페이지와 끝페이지의 이미지번호, 
+      그리고 주희의 『논어집주』 편차에 따라 편장이 구분된 경우 주석이 검색이 가능하다는 의미의 “1”이라는 속성값이 있다. 
+      『경서변의(經書辨疑)·논어(論語)』의 ‘이미지 파일’을 보면, 극항(極行)에 둔 것이 <원문내경문>이고, 
+      다음 행에서 한글자를 낮추어 쓴 부분은 <주석>에 해당한다. 
+      </p>
+      <img src="https://dh.aks.ac.kr/~kimseoyun/icon/xml_7.png" /> 
+    <p>
+      그런데 문제는, 이미지 파일의 ‘학이 15장’ 부분에 파란색 네모로 표시한 “주수유득언(註雖有得焉)”은 ‘여절여차(如切如磋)’라는 경문에 대해 “(『논어집주』에서) ‘비록 깨달은 것이 있지만’이라고 주석했다.”는 의미여서 <중국주석> 요소로 처리해야 하는데, 『논어』의 경문과 같은 줄에 썼기 때문에 <원문내경문>으로 표시하고 있다는 것이다. XML문서는 원전의 plain text를 오른쪽의 digital text로 변환해주는 역할을 하므로, 이러한 오류 때문에 경학자료 시스템에서도 註雖有得焉이 경문으로 표시된 것을 볼 수 있다. 
+      그리고 XML 문서에는 <색인> 요소들이 보이는데, 이는 문자 데이터 중간에 삽입되어 특정 어휘 또는 어절의 
+      성격을 알려주는 역할을 수행하는 ‘문중요소(In-Text Element)’라고 할 수 있다. 
+      아래의 경학자료 시스템의 XML문서 DTD를 통해, 
+      경학자료 시스템에서는 글에 서명·편명·인명·지명·관명이 나올 때마다 <색인>이라는 문중요소를 추가하는 것을 알 수 있다.
+    </p>
+      <div class="img" >
+      <img src="https://dh.aks.ac.kr/~kimseoyun/icon/xml_8.png" /> 
+    </div>
+    <p>그러나 원전의 이미지파일에서 보이는 ‘인명’에 모두 밑줄을 그어 보았을 때,  퇴계(退溪)·경임(景任: 조선 중기의 문인 鄭經世를 말한다)·자공(子貢: 공자의 제자)·부자(夫子: 孔子에 대한 존칭) 등 여러 인명이 나왔지만 XML 문서에서는 빨간색 밑줄로 되어 있는 퇴계(退溪)와 주자(朱子)만 <색인> 요소로 표기되어 있는 것을 볼 수 있다. 
+이러한 문제들은 경학자료들이 모두 번역이 되었을 경우 어느 정도 해결될 수 있을 것이다. 그러나 아직도 1,234종의 저술에 달하는 145책 규모의 『한국경학자료집성』은 대부분이 번역이 되어 있지 않았기 때문에 이 문제는 쉽게 해결되기 어려울 것이라고 생각한다. 그럼에도 불구하고, 이 많은 경학 자료들이 각각 어떤 주석의 영향을 받아 어떤 해석을 전개하고 있는지 빠르게 파악하면서 내가 원하는 주석을 손쉽게 찾아 확인할 수 있는 방법이 없을까 하는 고민에 빠지게 되었다. 그 결과, 경학 주석서들이 대부분 인용을 바탕으로 쓰여진다는 점에 착안하여 그 인용 관계를 파악하고 원래의 주석이 무엇인지 확인할 수 있는 시스템이 있다면, 여러 주석서의 내용을 빠르게 파악해나갈 수 있으리라 생각한다. 
+</p> 
+<p>
+      아울러, 어떤 주석서에 인명 혹은 서명이 등장하는 경우 그 부분은 인용 관계로 연결될 가능성이 높다. 위에서 예를 들었던 문장만 보아도 퇴계운(退溪云), 경임왈(景任曰)은 모두 인용 관계에 해당한다. 이처럼 인명이나 서명을 찾아 문중요소로 표시하는 것과 XML 문서에 인용관계를 표시하는 것은 별개의 일이 아니다. 이에 더하여, 인용정보나 인용형태, 인용목적 등의 데이터가 추가된다면, 위에서 언급한 XML 문서의 오류를 줄일 수 있을 뿐만 아니라 더 다양한 연구에 경학자료가 활용될 수 있을 것이라고 생각한다. 
+</p>
+
+<p>
+  - 참고:
+  <a href="https://wikidocs.net/239523"
+    >XML(TEI) with 인문학 - 디지털인문학 시리즈 〈3. 고문헌 XML(TEI) 설계검토〉 </a
+  >
+</p>
+
+<h2>TEI 가이드라인 검토</h2>
+<p>
+  앞에서 XML은 자료 구조의 확장이나 변형의 유연성을 최대한 보장한다고 말한 바 있다. ‘구조의 확장이나 변형의 유연성’은 XML 문서의 최대 장점이지만, 텍스트 자료를 표현함에 있어 지나치게 자유로운 사용자 태그허용은 서로 다른 시스템들이 중구난방으로 제작되는 문제점을 야기하기도 한다. 이러한 시스템들은 대부분 설계가 잘못되었거나 호환성이 없어 공유가 어려우며, 전자화 텍스트 프로젝트가 출범할 때마다 계속해서 설계가 늘어나 새로운 보존 문제를 야기시켰으며, 이 모든 상황은 컴퓨터의 잠재력을 이끌어내려는 디지털 인문학 연구에 장애가 되어왔다. 디지털 기술을 활용하려는 학계나 출판업계에서 이처럼 지속적이고 공유가 가능한 아카이브 도구 제작에 어려움을 겪고 있었기에, 1987년에 특정 하드웨어 및 소프트웨어에 구애 받지 않는 인문학 데이터의 전자적 인코딩 방법론을 개발·유지·보급하기 위한 TEI(Text Encoding Initiative)가 설립되었다.
+</p>
+<p>
+  당초 TEI는 기존 표준과의 호환성을 위하여 인코딩 과정에 SGML을 적용했으나, 2002년부터는 XML을 TEI 메타언어로 적용하고 있다. TEI의 목표는 다양한 텍스트를 적절하게 처리하고, 새로운 문서 생산에 유용해야 할 뿐만 아니라 기존 XML 소프트웨어와의 호환성도 유지할 수 있어야 한다. 
+</p>
+<p>
+  이 장에서는 TEI Lite 가이드라인을 통해 경학자료와 같은 문헌을 구조화할 수 있는 요소들을 검토하고, 다음 장에서는 한국경학자료시스템에서 다운로드한 『사변록』 XML과 비교하면서 인용관계를 나타낼 수 있는 XML문서를 작성해 보고자 한다.
+</p>
+<p>TEI 문헌은 아래와 같이 〈teiHeader〉부분과 〈text〉로 구성된다. TEI header는 인쇄된 텍스트의 제목 페이지에서 제공하는 것과 유사한 정보를 제공하며, 네 개의 주요부분으로 이루어진다. 
+  TEI text는 단일 작품이거나 명문선집과 같은 단일 작품들의 합본일 수 있다. 
+  합본의 경우 여러 개의 〈group〉으로 구성될 수 있지만, 단일 텍스트일 경우 아래와 같이 〈front〉, 〈body〉, 〈back〉으로 구성된다.  
+</p>
+<div class="img" >
+<img src="https://dh.aks.ac.kr/~kimseoyun/icon/xml_9.png" /> 
+</div>
+<p>
+  <front> 요소는 제목·표제면·서문·헌사 등의 텍스트 본문 앞에 오는 모든 종류의 머리지면 요소를 표시한다. 
+    예를 들어 표제면에 기재된 문헌제목〈docTitle〉이나 부제〈titlepart〉, 저작에 대한 일차적 책임〈byline〉, 문헌의 저자명〈docAuthor〉, 문헌의 날짜〈docDate〉, 판사항〈docEdition〉, 
+      발행사항〈docImprint〉 등을 표시하는 〈titlepage〉요소를 포함하기도 하고, 목록을 표시하는 〈list〉 요소를 포함하기도 한다. 〈back〉 요소는 본문 뒤에 나오는 부록 등을 포함한다. 
+        type 속성을 이용하여 추가적인 비정규 텍스트, 용어 목록, 주석, 참고문헌, 색인, 판권 등을 제공할 수 있다.  
+</p>
+<p>
+  <body> 요소는 머리지면이나 뒷지면을 제외한 본문 전체를 포함한다. 산문 텍스트의 본문이 단순히 단락(paragraph)의 연속이라면 〈p〉 태그로 표시하면 된다. 
+    그러나 단락들이 장절로 구성된 경우, 〈body〉 요소는 일련의 〈div〉 요소 들로 구분된다. 〈div〉 요소의 속성은 상호참조 또는 고유 식별자를 
+    제공하는 xml:id, 이름이나 번호와 같은 기타요소를 제공하는 n, 전통적인 텍스트 구분 범주의 이름을 표시하는 type이 있다. 
+    type의 전형적인 속성값으로는 책(Book)·장(Chapter)·절(Section)·구(Part)·시(Poem)·노래(Song) 등이 올 수 있으며, 
+    중첩된 다른 〈div〉를 포함할 수 있으므로 편·장·절 등의 단위가 계층적으로 분해된 전통적인 책 구조를 모방할 수 있다.  
+</p>
+<div class="img" >
+<img src="https://dh.aks.ac.kr/~kimseoyun/icon/xml_10.png" /> 
+</div>
+<p>
+  <div> 시작 부분에는 제목 또는 머리말을 표시하는 〈head〉가 올 수 있으며, 단락을 구분할 때에는 〈p〉로, 페이지와 줄바꿈 등은 〈pb〉(page beginning), 〈lb〉(line beginning)으로 표시한다. 
+</p>
+<p>
+  지금까지 TEI에서 경학자료의 텍스트를 인코딩할 수 있는 〈text〉 부분의 가이드라인을 살펴보았다. 현재 인문학 분야에서는 텍스트 인코딩 체계로 TEI를 널리 사용하고 있다. 다양한 전자 텍스트와 문화 유산 컬렉션의 메타데이터를 관리하고 생성하는 데에도 사용되고 있으며, CBETA 전자불전 집성 프로젝트는 TEI를 기반으로 수행된 대표적인 대규모 프로젝트의 사례이다. 그러나 TEI에는 한계점이 존재한다. TEI는 기본적으로 서구 언어학 문헌의 인코딩을 목적으로 개발되었기 때문에, 동아시아 인문학 문헌의 인코딩에 있어 제한점을 갖는다. 우리나라에서는 각 프로젝트의 필요에 따라 독자적인 XML 태그 설정이 빈번히 이루어졌고, 이러한 접근은 호환성 문제를 야기할 수 있는 요인이 된다. 따라서 우리는 국내에서라도 인문학 문헌에 적용하기 용이한 통일된 XML 태그 세트를 개발하고 발전시켜야 한다. 이러한 노력을 통해 TEI의 장점을 활용하면서도 한국 고유의 인문학 자료를 더욱 효과적으로 디지털화하고 연구할 수 있는 기반을 마련할 수 있을 것이다.
+</p>
+<p> 
+  - 참고:
+  <a href="https://wikidocs.net/249687"
+    >XML(TEI) with 인문학 - 디지털인문학 시리즈 〈2. TEI: 전자 텍스트 기술언어〉</a
+  >
+</p>
+
+<h2>인용관계 XML 작성</h2>
+    <div>
+      <h4>-한국경학자료시스템 XML</h4>
+      <p>
+        사변록:
+        <a
+          href="https://dh.aks.ac.kr/~kimseoyun/101/research_note/xml/JCXL018_13_0001.xml"
+          >018_13.xml</a
+        >
+
+
+        <br />
+        녹문집:
+        <a
+          href="https://dh.aks.ac.kr/~kimseoyun/101/research_note/xml/JCXL023_10_0001.xml"
+          >023_10.xml</a
+        >
+        <br />
+        경사강의:
+        <a
+          href="https://dh.aks.ac.kr/~kimseoyun/101/research_note/xml/JCXL026_07_0001.xml"
+          >026_07.xml</a
+        >
+      </p>
+    </div>
+
+    <!-- <h2>
+      <a href="https://docusky.org.tw/DocuSky/home/v5/?l=korea"
+        >DocuXML 표준 규칙</a
+      >
+    </h2>
+    DocuXml은 DocuSky에서 구축하는 데이터베이스에 사용되는 언어이다.
+    它的目的是將欲建庫的所有文本資料包裝在 XML 檔案中，便利 DocuSky
+    從中擷取建庫所需的 全文資料 (full-text)、詮釋資料 (metadata)、以及文本標記
+    (tagged text) 等資訊。 建構好的資料庫，將可支援全文檢索、後分類
+    (post-classification) 與標記分析 (tag analysis)。 DocuXml 1.0은 상당 부분이
+    대만역사디지털도서관(臺灣歷史數位圖書館, THDL）에서 설계한 ThdlExportXml을
+    참고한 것이다. 有別於一般 coding 常用的 camel style，在 ThdlExportXml
+    中的詮釋資料標籤多半採用 underline style， 而內文的標記資訊則採用 Pascal
+    style。未來我們將努力，改採一致的 Pascal style 標籤風格。 -->
+
+    
+    
+
+    <h2>인용관계 XML 작성</h2>
+
+    <div>
+      <h4>-논어주석 인용관계 TEI-XML</h4>
+      <p>
+        본 연구에서는 경학자료 텍스트를 엄격하게 정의하고 효율적으로 처리하기 위해 디지턱 텍스트 인코딩의 글로벌 스탠다드로 잡리잡은 TEI를 참고하였다. 
+        또한 한문 고전 연구자들이 쉽게 사용할 수 있는 XML 문서를 만들기 위해서는, 
+        연구에 필요한 텍스트 특성을 충분히 표현할 수 있도록 추가적인 기능을 추가하거나 제거할 수 있어야 하고, 
+        공통적인 핵심 특성 역시 분명하게 공유되어야 한다. 
+        이를 구체적으로 정의하기 위해서는 텍스트와 그 인코딩에 대한 적절한 문서가 제공되어야 하므로 
+        아래 표를 통해 기존 스키마와의 비교를 진행하고자 한다.
+      </p>
+      <p>
+        사변록: citation_018_13.xml<br />
+        <div class="img" >
+        <p>기존 XML</p>
+        <img src="https://dh.aks.ac.kr/~kimseoyun/icon/xml_14.png" /> 
+
+        <p>인용관계 XML</p>
+        <img src="https://dh.aks.ac.kr/~kimseoyun/icon/xml_13.png" /> 
+      </div>
+        <!-- <pre class="language-css box"><code></code></pre> -->
+
+        녹문집: citation_023_10.xml<br />
+        경사강의: citation_026_07.xml<br />
+      </p>
+    </div>
+
+<h1>(추후 수정 및 보완 예정)</h1>
+
+
+  </div>
+  </body>
+</html>

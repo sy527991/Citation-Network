@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 100);
+      }
+
+      a:hover {
+        color: rgba(13, 36, 242, 0.9);
+      }
+
+      ul {
+        list-style-type: none; /*Removes the bullet points*/
+        margin: 0; /*moves list up*/
+        padding: 0; /*moved the list to the left, against the left side*/
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /*keeps the navigation bar at the top of the page when scrolling*/
+        top: 0; /*top and width tell where the navigation bar should stay. If you wanted it fixed at the bottom you'd type bottom instead of top*/
+        width: 100%;
+      }
+
+      li {
+        float: left; /*put everything on one line*/
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px; /*spaced the words out*/
+        text-decoration: none; /*removed the underline from each word*/
+      }
+
+      li a:hover {
+        background-color: #111; /*makes it so the color changes behind each word when you hover over it*/
+      }
+
+      .Contact-Button {
+        position: relative;
+        display: block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 10px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+      @import 'https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans:400,600';
+      body {
+        background-image: url(https://dh.aks.ac.kr/~kimseoyun/icon/img_front.jpg);
+        /* background-repeat: no-repeat; */
+        background-size: 100%;
+      }
+      body {
+        h1 {
+          font-weight: 700;
+          margin-bottom: 30px;
+          font: {
+            family: 'Open Sans', sans-serif;
+          }
+        }
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .box {
+          width: 65%;
+          background: rgba(0, 0, 0, 0.5);
+          margin-top: 35px;
+          margin-bottom: 35px;
+          padding: 15px;
+        }
+      }
+
+      .quote-block {
+        border: {
+          radius: 15px;
+        }
+        background: rgba(204, 191, 175, 0.3);
+        width: 55%;
+        margin: {
+          left: auto;
+          right: auto;
+        }
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .quote {
+          font: {
+            family: 'Kaushan Script', cursive;
+            size: 2em;
+          }
+        }
+        .book {
+        }
+        .btn {
+          font-family: 'Kaushan Script', cursive;
+          margin: 20px;
+          font-size: 18px;
+          height: 30px;
+        }
+      }
+
+      h1,
+      p {
+        color: #fff;
+        text-shadow: 1px 1px black;
+      }
+
+      .box h1 {
+        font-size: 3em;
+      }
+
+      .box p {
+        font-size: 1em;
+      }
+      $spacing-unit: 16px;
+      $half-spacing-unit: $spacing-unit / 2;
+      $quarter-spacing-unit: $spacing-unit / 4;
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      html {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: #222 url(https://i.cloudup.com/B-nGjfTv8k.jpg) no-repeat;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(https://i.cloudup.com/B-nGjfTv8k.jpg);
+        background-size: cover;
+      }
+      .options {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ddd;
+        padding: $spacing-unit * 3;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+
+        input {
+          display: none;
+        }
+        // .options > label
+        > label {
+          display: inline-block;
+          position: relative;
+          margin-right: $spacing-unit;
+          padding-left: $spacing-unit + $half-spacing-unit;
+          cursor: pointer;
+
+          // .options > label:before
+          // this creates the outer circle for faux radio button
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 50%;
+            margin-top: -8px;
+            border: 1px solid #fff;
+            border-radius: 8px;
+          }
+
+          // .options > label:after
+          // this creates the inner circle for active faux radio button
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 8px;
+            margin-top: 0;
+            background: #fff;
+            border-radius: 4px;
+            transition: 0.2s ease-in-out;
+          }
+        }
+
+        // .options :checked + label:after
+        :checked + label {
+          &:after {
+            height: 8px;
+            width: 8px;
+            margin-top: -4px;
+            left: 4px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/preface.html">Preface</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/citation.html">Citation</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/xml_data.html">XML</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/table_data.html">Data</a>
+      </li>
+
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/analysis.html">Analysis</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/archive.html">archive</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/references.html"
+          >References</a
+        >
+      </li>
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+          <a href="#">Link 6</a>
+        </div>
+      </div>
+      <li style="float: right">
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/about.html">About</a>
+      </li>
+    </ul>
+    <div class="options">
+      <h1>Kim Seoyun <br /><small>sy527991@gmail.com</small></h1>
+      <p>
+        Center for Digital Humanities at the Academy of Korean Studies<br /><a
+          href="http://dh.aks.ac.kr"
+          >http://dh.aks.ac.kr</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

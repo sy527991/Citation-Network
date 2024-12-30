@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>visualization</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 100);
+      }
+
+      a:hover {
+        color: rgba(13, 36, 242, 0.9);
+      }
+
+      ul {
+        list-style-type: none; /*Removes the bullet points*/
+        margin: 0; /*moves list up*/
+        padding: 0; /*moved the list to the left, against the left side*/
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /*keeps the navigation bar at the top of the page when scrolling*/
+        top: 0; /*top and width tell where the navigation bar should stay. If you wanted it fixed at the bottom you'd type bottom instead of top*/
+        width: 100%;
+      }
+
+      li {
+        float: left; /*put everything on one line*/
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px; /*spaced the words out*/
+        text-decoration: none; /*removed the underline from each word*/
+      }
+
+      li a:hover {
+        background-color: #111; /*makes it so the color changes behind each word when you hover over it*/
+      }
+
+      .Contact-Button {
+        position: relative;
+        display: block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 10px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+      iframe {
+        width: 100%;
+        height: 800px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid rgb(0, 0, 16);
+        border-collapse: collapse;
+      }
+      .img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/preface.html">Preface</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/citation.html">Citation</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/table_data.html">Data</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/xml_data.html">XML</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/analysis.html">Analysis</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/references.html"
+          >References</a
+        >
+      </li>
+
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+          <a href="#">Link 6</a>
+        </div>
+      </div>
+      <li style="float: right">
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/about.html">About</a>
+      </li>
+    </ul>
+    <img src="https://dh.aks.ac.kr/~kimseoyun/icon/confucius.jpg" />
+    <h1 align="center">네트워크 그래프 시각화</h1>
+
+    <h4>
+      <a href="https://dh.aks.ac.kr/Edu/wiki/index.php/논어인용관계_학이">
+        한국학중앙연구원 인문정보학 Wiki의 make-graph</a
+      >
+    </h4>
+    <iframe
+      src="https://dh.aks.ac.kr/~sandbox/cgi-bin/wikiGraphPresenter.py?account=edu&script=논어인용관계_학이&direction=NORMAL"
+    >
+      title="시맨틱 그래프" ></iframe
+    >
+
+    <h4>
+      <a href="https://docusky.org.tw/DocuSky/"
+        >대만대학 디지털인문학연구센터의 Docusky</a
+      >
+    </h4>
+    <iframe src="https://docusky.org.tw/DocuSky/home/v5/?l=korea">
+      title="인용관계 그래프" ></iframe
+    >
+    공개데이터로 전환되기 전에는 개인적으로 로그인 후 [개인 데이터베이스]에서
+    확인 가능
+
+    <div class="img" <div class="img">
+      <h4>개별 텍스트 인용관계도(comment)</h4>
+      <img src="https://dh.aks.ac.kr/~kimseoyun/icon/docusky_graph03.png" />
+      <h4>전체 텍스트 인용관계도(그래프아이콘)</h4>
+      <img src="https://dh.aks.ac.kr/~kimseoyun/icon/docusky_graph01.png" />
+
+      <p align="center">『사변록·논어·학이편』을 예시로 한 Docusky 시각화</p>
+    </div>
+  </body>
+</html>

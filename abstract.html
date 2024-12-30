@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 이미지 width: 100%; -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>abstract</title>
+
+    <style>
+      @import 'https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans:400,600';
+      body {
+        background-image: url(https://dh.aks.ac.kr/~kimseoyun/icon/img_front.jpg);
+        /* background-repeat: no-repeat; */
+        background-size: 100%;
+      }
+      body {
+        h1 {
+          font-weight: 700;
+          margin-bottom: 30px;
+          font: {
+            family: 'Open Sans', sans-serif;
+          }
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .box {
+          width: 65%;
+          background: rgba(0, 0, 0, 0.5);
+          margin-top: 35px;
+          margin-bottom: 35px;
+          padding: 15px;
+        }
+      }
+
+      .quote-block {
+        border: {
+          radius: 15px;
+        }
+        background: rgba(204, 191, 175, 0.3);
+        width: 55%;
+        margin: {
+          left: auto;
+          right: auto;
+        }
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .quote {
+          font: {
+            family: 'Kaushan Script', cursive;
+            size: 2em;
+          }
+        }
+        .book {
+        }
+        .btn {
+          font-family: 'Kaushan Script', cursive;
+          margin: 20px;
+          font-size: 18px;
+          height: 30px;
+        }
+      }
+
+      h1,
+      p {
+        color: #fff;
+        text-shadow: 1px 1px black;
+      }
+
+      .box h1 {
+        font-size: 3em;
+      }
+
+      .box p {
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>조선시대 논어 주석의 인용 관계망<br /></h1>
+        <h2>
+          A Citation Network of the Joseon Dynasty’s Annotation of the Analects
+        </h2>
+        <p>
+          본 연구는 조선시대 논어 주석의 인용 양상을 살피고 그 인용 관계를
+          체계화해서 데이터로 정리해나가는 데 중점을 두고 있으며, 네트워크
+          그래프를 통해 이를 시각화해서 주석자간 관점의 차이를 좀더 쉽게
+          파악하고자 하는 데에 목적을 두고 있다. 먼저 ‘조선시대의 논어주석서’를
+          연구대상으로 다루어 본 후에, 이 방식으로 유의미한 결과를 얻을 수
+          있다고 여겨진다면, 같은 방법론으로 동아시아 삼국의 주석까지 연구를
+          확대해 볼 계획이다. 그렇게 해서 최종적으로 주자 이후 동아시아
+          삼국에서는 어느 시대에 어떤 주석이 중요한 해석으로 판단되었는지,
+          한자문화권 전반에 걸친 지식의 수용과 발전의 측면에서 동아시아 논어학을
+          연구해 보고자 한다.
+        </p>
+        <p>
+          본 연구는 유가의 경문을 연구하는 ‘경학’이라기 보다, 주희 이후 동아시아
+          삼국에서 해석한 경전의 의미를 연구하는 ‘경전주석학’이라고 할 수 있다.
+          경전의 의미를 파악하고자 했던 시대적 요구에 따라 경학사에서는
+          경전만큼이나 경전을 해석한 주석이 중요하게 여겨졌으며, ‘경학사’란 바로
+          ‘경전에 대한 다양한 해석의 역사’이다. 본 연구의 목적은 역대의 경전
+          주석을 종합적으로 살필 수 있는 데이터베이스를 구축하는 것이며, 이를
+          통해 한국뿐만 아니라 중국 및 일본의 주석까지 의미적인 맥락으로
+          연결함으로써 동아시아 경학사를 재정립하는 것이 최종 목표이다.
+        </p>
+      </div>
+
+      <div class="quote-block">
+        <div class="quote">
+          <i class="fa fa-quote-left"></i>&nbsp;<span id="quote"></span>
+        </div>
+        <div class="book">
+          <span id="book"></span>
+        </div>
+        <a
+          href="https://dh.aks.ac.kr/~kimseoyun/101/preface.html"
+          target="blank"
+        >
+          <button type="submit" class="btn btn-default">Click Here</button>
+        </a>
+      </div>
+
+      <p class="small">
+        Created by
+        <a href="https://dh.aks.ac.kr/Edu/wiki/index.php/김서윤">Kimseoyun</a>
+      </p>
+    </div>
+  </body>
+</html>

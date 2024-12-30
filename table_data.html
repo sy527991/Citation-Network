@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table_data</title>
+
+    
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 100);
+      }
+
+      a:hover {
+        color: rgba(13, 36, 242, 0.9);
+      }
+
+      /* h3 {color: rgba(137, 130, 130, 0.9);} */
+      ul {
+        list-style-type: none; /*Removes the bullet points*/
+        margin: 0; /*moves list up*/
+        padding: 0; /*moved the list to the left, against the left side*/
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /*keeps the navigation bar at the top of the page when scrolling*/
+        top: 0; /*top and width tell where the navigation bar should stay. If you wanted it fixed at the bottom you'd type bottom instead of top*/
+        width: 100%;
+      }
+
+      li {
+        float: left; /*put everything on one line*/
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px; /*spaced the words out*/
+        text-decoration: none; /*removed the underline from each word*/
+      }
+
+      li a:hover {
+        background-color: #111; /*makes it so the color changes behind each word when you hover over it*/
+      }
+
+      .Contact-Button {
+        position: relative;
+        display: block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 10px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      img { 
+        width: 100%;
+      }
+      iframe {
+        width: 100%;
+        height: 800px;
+      }
+      table {
+        border: 1px solid rgb(0, 0, 16);
+        border-collapse: collapse;
+        width: 100%;
+        height: 300px;    
+        align-items: center;    
+      }
+      
+      th,
+      td{
+        border: 1px solid rgb(0, 0, 16);
+        border-collapse: collapse;
+        text-align: center; 
+      }
+      #example {
+        background-color : wheat;
+        padding : 5px;
+        align-items: center;
+        margin-left: 10px;
+        scroll-margin-right: 10px;
+      }
+
+      .content {
+        padding: 15px;
+        background-color: #ffffff;
+        margin: 15px;
+      }
+      .container {
+        max-width: 1200px !important;
+        margin: 100px 0;
+        font-family: 'Open Sans';
+      }
+
+      .container {
+        box-sizing: border-box;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+
+      /* 포스트잇 */
+      /*  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+
+body {
+  margin:0;
+  font-family: 'Open Sans', sans-serif;
+  background: #eee;
+  font-size: 16px;
+  line-height: 1;
+  padding: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+h3 { 
+  margin: 0;
+  padding: 0;
+  font-size: 140%;
+  font-weight: normal;
+  line-height: 1.5;
+}*/
+
+.postit1,.postit2,.postit3,.postit4 {
+	position:relative;
+	padding: 25px;
+	display: inline-block;
+	-webkit-box-shadow: 0 8px 10px -7px #999;
+	-moz-box-shadow: 0 8px 10px -7px #999;
+	box-shadow: 0 8px 10px -7px #999;
+	-webkit-border-bottom-right-radius: 60px 10px;
+	-moz-border-radius-bottomright: 60px 10px;
+	border-bottom-right-radius: 60px 10px;
+	margin: 0 0 20px 20px;
+}
+
+.postit1 h3,.postit2 h3,.postit3 h3,.postit4 h3 {
+	border-top-width: 2px;
+	border-top-style: dotted;
+	margin: 0 -25px;
+	padding: 15px 25px 0 25px;
+}
+
+.postit1 {background: #fefabc;}
+.postit1 h3 {border-top-color: #dbd581;}
+.postit2 {background: #FDD7DB;}
+.postit2 h3 {border-top-color: #E6A1A8;}
+.postit3 {background: #EAF763;}
+.postit3 h3 {border-top-color: #72A201;}
+.postit4 {background: #B9EAF6;}
+.postit4 h3 {border-top-color: #6DB4C4;}
+
+blockquote {
+        background: #eee
+          url(http://www.webcreatorbox.com/sample/images/quote.gif) no-repeat
+          10px 10px;
+        padding: 25px;
+        font-family: Sans-Serif;
+      }  
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/preface.html">Preface</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/citation.html">Citation</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/xml_data.html">XML</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/table_data.html">Data</a>
+      </li>
+  
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/analysis.html">Analysis</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/archive.html">archive</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/references.html">References</a>
+      </li>
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+          <a href="#">Link 6</a>
+        </div>
+      </div>
+      <li style="float: right">
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/about.html">About</a>
+      </li>
+
+
+    </ul>
+    <img width="100%"" src="https://dh.aks.ac.kr/~kimseoyun/icon/confucius.jpg" />
+
+    <div class="container-fluid content">
+    <h1 align="center">인용관계 데이터</h1>
+
+    <blockquote>  
+        <h2>인용관계 분석대상: 사변록, 녹문집, 경사강의</h2>
+        <p>
+          - 자료선정 기준: 서로 다른 학문 경향을 가진 논어 주석 <br/>
+          - 자료수집 방법: 한국경학자료시스템 XML, 한국고전종합DB 번역문 <br/>
+        </p>
+    </blockquote> 
+
+
+
+
+
+    <p>이번 장에서 살펴볼 내용은 앞에서 분류한 인용 체계를 바탕으로 설계된  『논어』의 학이편 인용 관계 데이터이다. 데이터는 아래 세 책에 실린 『논어』를 대상으로 설계되었으며, 세 학자의 주석을 살피기에 앞서, 그들의 학문적 배경에 대해 알아보고자 한다. 
+    </p>
+
+    <h3>1)학문경향</h3>
+    <p>조선의 17세기 유학자 박세당은 본관이 반남(潘南)이고, 자는 계긍(季肯)이며, 호는 잠수(潛叟) · 서계초수(西溪樵叟) · 서계(西溪)이다. 4살 때 아버지가 죽고 편모 밑에서 원주 · 안동 · 청주 · 천안 등지를 전전하다가 13세에 비로소 고모부인 정사무(鄭思武)에게 수학하였다. 박세당의 사상에 대해서는 유학의 근본정신을 추구했다는 견해가 있고, 주자학은 물론 유학 자체에 회의해 노장학(老莊學)으로 흐르는 경향이 있다는 주장도 있다. 그러나 학문의 근본 입장은 당시 통치 이념인 주자학을 비판하고 중국 중심적 학문 태도에 회의적이었다고 보는 데는 이론이 없다. 그의 학문과 사상은 성장기의 고난과 청 · 장년기의 관리 생활을 통한 개혁 의식, 그리고 당쟁의 와중에서 겪은 가족의 수난과 어려운 농촌에서 지낸 경험 등을 통해서 형성된 사회 현실관의 반영이라 하겠다. 『사변록』은 박세당의 문집으로, 경학자료집성에는『논어』제1책에 열세 번째로 실렸으며, 이에 해당하는 번역문은 한국고전종합DB 『사변록』[三]에서 확인할 수 있다.
+    </p>
+    <p>조선 성리학의 6대가 중 한 사람인 임성주는 충청북도 청풍 출신으로, 본관은 풍천(豐川)이고, 자는 중사(仲思), 호는 녹문(鹿門)이며, 이재(李縡)의 문인이다. 초년에는 스승의 학설을 신봉하여 인물성동론(人物性同論)을 주장하였으나, 중년에 이르러 기존의 학설을 비판하고 호락(湖洛)의 양론을 기일원론적(氣一元論的) 입장에서 종합하여 자신의 학설을 수립하였다. 그의 철학은 일원론적 구조 위에서 정초되었으며, 이기를 기일원론적 관념으로 통일함으로써 조선시대 성리학의 결정(結晶)을 이루었다는 평가를 받고 있다. 『녹문집』의 잡저 부분에 『논어』에 관한 해석이 실려 있으며, 경학자료집성에는 『논어』제6책에 열 번째로 실렸다. 번역문은 고전종합DB 『녹문선생문집』의 제13권에서 확인할 수 있다.
+    </p>
+    <p>조선의 제22대 왕 정조의 재위 기간은 1776년∼1800년이며, 이름은 이산(李祘)이고, 자는 형운(亨運), 호는 홍재(弘齋)이다. 『경사강의』는 18세기 후반 정조와 문신들의 학문적 논의 수준을 보여주는 매우 중요한 텍스트로, 정조는 규장각 초계문신으로 선발된 노소론계 및 남인계 소장학자들에게 경문의 의미, 성인(聖人)의 위상과 역할, 주자학적 해석 방식, 학문과 정치의 관계 등 다양한 맥락의 질문을 던짐으로써 당시의 학문적‧정치적 담론 공간을 보다 넓게 확장시켰다. 정조는 조선시대 27명의 왕 가운데 유일하게 문집을 남겼으며, 그의 문집 『홍재전서』는 180권 100책 10갑에 달한다. 이러한 학문적 토대가 있었기에 스스로 임금이자 스승인 군사(君師)로 자부하고 신하들을 영도할 수 있었다. 학문을 숭상하는 시대에 탁월한 학문적 능력으로 군사의 위상을 확보하여 문화국가를 통치한 것이다. 경사강의는 『홍재전서』권64∼119에 수록되어 있으며, 『논어』는 권71~75에 해당한다. 경학자료집성 『논어』제9책에 일곱 번째로 실려 있으며, 번역문은 고전종합DB 『홍재전서』 제71권에서 확인할 수 있다.
+    </p>
+    <p>
+      다음은 위의 내용을 바탕으로, 인용 관계 분류체계를 적용하여 분석할 대상을 표로 정리한 것이다. 학문 경향에는 위에서 살펴본 내용 중에 가장 특징적인 점을 요약해두었는데, 그 아래에 학이편에서 가장 많이 인용된 문헌과 인물, 그리고 가장 많이 사용된 인용목적을 함께 기입하여 학문 경향과의 연관성을 유추해 볼 수 있게 하였다. 
+    </p>
+
+    <div class="section">
+      <table>
+        <th width="12%" style="background-color: wheat">서명</th>
+        <th width="15%" >저자</th>
+        <th width="17%" ><a href="http://koco.skku.edu/index.jsp">데이터출처</a></th>
+        <th width="17%" ><a href="https://db.itkc.or.kr/">번역문출처</a></th>
+        <th width="30%" >학문 경향</th>
+
+        <tr>
+          <td style="background-color: wheat"><a href="https://encykorea.aks.ac.kr/Article/E0025653"
+            >사변록(思辨錄)</a></td>
+          <td><a href="https://encykorea.aks.ac.kr/Article/E0020803"
+            >박세당(朴世堂, 1629～1703)</a
+            ></td> 
+          <td>한국경학자료집성 논어 제1책 13 思辨錄-論語
+          </td>
+          <td><a
+            href="https://db.itkc.or.kr/dir/item?itemId=GO#dir/node?dataId=ITKC_GO_1372A_0030_010_0010&viewSync=TR"
+            >한국고전종합DB 思辨錄[三] 論語 第一學而</a
+          ></td>
+          <td>유학의 근본 정신을 추구, 중국 중심적 학문 태도에 회의적<br/>
+            - 논어집주(80%), 주희(53%)<br/>- 목적: 補引(47%), 駁引(40%)</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat"><a href="https://encykorea.aks.ac.kr/Article/E0012977"
+            >녹문집(鹿門集)</a></td>
+          <td><a href="https://encykorea.aks.ac.kr/Article/E0047491"
+            >임성주(任聖周, 1711~1788)</a
+            ></td>
+          </td>
+          <td>한국경학자료집성 논어 제6책 10 經義-論語
+        </td>
+          <td><a
+            href="https://db.itkc.or.kr/dir/item?itemId=MO#dir/node?dataId=ITKC_MO_0584A_0710_010_0010&viewSync=TR"
+            >한국고전종합DB 鹿門先生文集卷之十三 雜著 經義
+            論語</a
+          ></td>
+          <td>이기를 기일원론적 관념으로 통일함으로써 <br/>조선시대 성리학의 결정(結晶)을 이룸<br/>
+            - 논어집주(63%), 주희(56%), 정자(23%)<br/>- 목적: 借引(51%), 正引(28%)</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat"><a href="https://encykorea.aks.ac.kr/Article/E0064371"
+            >경사강의(經史講義)</a></td>
+          <td><a href="https://encykorea.aks.ac.kr/Article/E0050867"
+            >정조(正祖, 1752~1800)</a
+          ></td>
+          <td>한국경학자료집성 논어 제9책 07 經史講義-論語
+        </td>
+          <td><a
+            href="https://db.itkc.or.kr/dir/item?itemId=MO#dir/node?dataId=ITKC_MO_0584A_0710_010_0010&viewSync=TR"
+            >한국고전종합DB 弘齋全書卷七十一 
+            經史講義八 ○論語[一]</a
+          >
+        </td>
+        <td>경문의 의미, 성인(聖人)의 위상과 역할, 주자학적 해석 방식, 학문과 정치의 관계 등 다양한 맥락의 질문을 던짐으로써 <br/>학문적‧정치적 담론 공간 확장<br/>
+          - 논어집주(34%), 논어(32%), 주희(45%), 공자(29%)<br/>- 목적: 疑引(39%), 借引(24%), 正引(22%)</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3> 2) <a href="https://docs.google.com/spreadsheets/d/11XEQGAJDVS6RtsNmpX-DHuPRbu6K544WAOuP-XQ-Q8U/edit?gid=0#gid=0">인용관계 데이터화</a> </h3>
+
+    <!-- <section id="example">  -->
+    <!-- <p>QR code 접속<br/> </p> 
+    <img src="https://dh.aks.ac.kr/~kimseoyun/icon/table data.jpg" 
+    style="
+    width: 5em;
+    height: 5em;
+    padding: 0.2em;
+    background-color: #e8e8e8;"> -->
+
+    <blockquote>  
+  <h2>테이블 데이터 구성요소 요약</h2>
+    <p>
+      - 경문ID, 원주ID: 한국경학자료시스템 XML문서 참고 <br/>
+      - 경문/주석 표기: 경문을 인용한 것인지 중국 주석인지, 혹은 한국 주석인지를 표기 <br/>
+      - 인용어 및 인용문 유무: 인용한 문헌이나 인물의 이름과 인용 문장 정보 <br/>
+      - 원전과의 일치 정도: 원전의 글자수와 인용문의 일치 비율 <br/>
+      - 인용 형태: 전체 인용, 변용 인용, 발췌 인용 등 <br/>
+      - 인용 목적: 긍정적 인용, 부정적 인용, 중립적 인용 등 <br/>
+      - 피인용자, 출처문헌, 편명 표기  <br/>
+      - 인용어(wording): 인용관계가 나타나는 문장에 사용되는 어휘 <br/>
+    - 인용문(target text), 원전(original text), 원전글자수, 일치수, 일치비율: 유사도 판단근거 <br/>
+    </p>
+  </blockquote> 
+
+    <iframe 
+      src="https://docs.google.com/spreadsheets/d/11XEQGAJDVS6RtsNmpX-DHuPRbu6K544WAOuP-XQ-Q8U/edit?gid=990621137#gid=990621137">
+      title="data type: table">
+    </iframe>
+
+    <p>본 연구는 조선시대 논어 주석의 인용 관계를 살피기 위해서 성균관대학교 대동문화연구원 '한국경학자료시스템'의 XML 문서를 활용할 예정이므로, 『논어』원문에 대한 <b>@경문ID</b>는 아래 그림의 한국경학자료시스템 XML과 동일하게 부여했다. 한국경학자료집성은 구성이 『대학』·『중용』·『논어』순이기 때문에 『논어』는 30001부터 시작되며, 예를 들어 30002는 『논어』제1편인 학이의 제2장에 해당된다는 의미이다.
+    </p>
+    <p>위의 테이블 데이터에서 박세당의 주석에 해당하는 <b>@원주ID</b>은 경문 30001에 대한 하나의 주석에 여러 인용 관계가 나타날 수 있으므로, 인용 관계가 나타나는 문장에만 001, 002…와 같은 ID를 부여하였다. 번역문의 굵은 글씨는 인용 관계가 나타난 부분이며, 빨간색 부분은 인용 목적의 근거로 삼은 부분을 표시한 것이다.</p>
+    <p><b>경문/주석 표기</b> 컬럼은 경문을 인용한 것인지 중국주석인지, 혹은 한국주석인지를 표기한 것이다. 인용어, 인용문 유무는 인용 분류체계에서 언급한대로, 인용한 문헌이나 인물의 이름과 인용하고 있는 문장 정보가 모두 있어서 원전을 찾기 쉬운지 어려운지, 혹은 원전 정보를 확신할 수 있는지에 관한 것이다. </p>
+    <p>다음으로 <b>원전과의 일치정도</b> 컬럼은 먼저 인용문의 출처가 되는 원전(original text)을 찾아 원전의 글자수와 인용문(target text)의 일치 비율을 계산한 것으로, 그 비율이 50% 이하이면 요점만 추려서 인용한 摘引이고, 50% 이상이면 약간의 변형을 거친 改引이며, 일치율이 80%가 넘는다면 거의 그대로 인용한 것에 해당하는 全引이다.</p>
+    <p><b>인용형태</b>는 모든 인용문에 나타나는 것은 아니며, 특정 문헌의 ‘한 문장’을 쪼개서 여러 개의 문장인 것처럼 인용하는 경우가 分引이다. 이와 반대로, 合引은 서로 다른 출처의 문장을 한 문장으로 합쳐서 인용하는 경우이다. 連引은 하나의 주제에 대해 여러 책의 문장을 연속적으로 인용하는 것이며, 複引은 같은 문장을 반복해서 인용하는 경우이다.</p>
+    <p><b>인용목적</b>에서 正引은 전적으로 동감하며 감탄하는 경우가 正引이고, 자신의 경설을 종합적으로 설명하기 위해 다른 주석에서 빌려와 증명하는 것이 借引이다. 인용문이 질문 형태이면서 기존 해석에 오류가 있다고 의심은 가지만 확실하지 않은 경우 疑引이라고 한다. 마지막으로, 기존의 해석이 부족하거나 미진한 경우에 보충해서 재해석한 경우를 補引이라고 하며, 기존 해석에 반박하는 것을 駁引이라고 한다.</p>
+    <p>모든 인용문에는 <b>피인용자</b>와 <b>출처문헌</b> 및 <b>편명</b>을 남겨두었으며, <b>인용문(target text)</b>, <b>원전(original text)</b>, <b>원전글자수</b>, <b>일치수</b>, <b>일치비율</b>은 모두 원전과의 유사도를 판단하기 위한 것이다. 
+      <b>인용어(wording)</b>는 추후 인용관계가 나타나는 문장에 사용되는 어휘가 어떤 것들이 있는지 살펴보기 위한 것으로, 예를 들면 『사변록』에는 謂, 曰, 說, 云, 訓, 猶 등의 어휘가 사용되는 것을 볼 수 있다.</p>
+
+  </div>
+
+</body>
+</html>

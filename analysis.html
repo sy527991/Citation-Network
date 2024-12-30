@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>analysis</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 100);
+      }
+
+      a:hover {
+        color: rgba(13, 36, 242, 0.9);
+      }
+
+      ul {
+        list-style-type: none; /*Removes the bullet points*/
+        margin: 0; /*moves list up*/
+        padding: 0; /*moved the list to the left, against the left side*/
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /*keeps the navigation bar at the top of the page when scrolling*/
+        top: 0; /*top and width tell where the navigation bar should stay. If you wanted it fixed at the bottom you'd type bottom instead of top*/
+        width: 100%;
+      }
+
+      li {
+        float: left; /*put everything on one line*/
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px; /*spaced the words out*/
+        text-decoration: none; /*removed the underline from each word*/
+      }
+
+      li a:hover {
+        background-color: #111; /*makes it so the color changes behind each word when you hover over it*/
+      }
+
+      .Contact-Button {
+        position: relative;
+        display: block;
+      }
+
+
+      img {
+        width: 100%;
+      }
+
+      .img {
+        width: 65%;
+      }
+
+      iframe {
+        width: 100%;
+        height: 800px;
+      }
+      
+      blockquote {
+        background: #eee
+          url(http://www.webcreatorbox.com/sample/images/quote.gif) no-repeat
+          10px 10px;
+        padding: 25px;
+        font-family: Sans-Serif;
+      }
+
+      .content {
+        padding: 15px;
+        background-color: #ffffff;
+        margin: 15px;
+      }
+      .container {
+        max-width: 1200px !important;
+        margin: 100px 0;
+        font-family: 'Open Sans';
+      }
+
+      .container {
+        box-sizing: border-box;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+
+      table,
+      th,
+      td {
+        border: 1px solid rgb(0, 0, 16);
+        border-collapse: collapse;
+      }
+
+    </style>
+  </head>
+  <body>
+        <ul>
+          <li>
+            <a href="https://dh.aks.ac.kr/~kimseoyun/101/preface.html">Preface</a>
+          </li>
+          <li>
+            <a href="https://dh.aks.ac.kr/~kimseoyun/101/citation.html">Citation</a>
+          </li>
+          <li>
+            <a href="https://dh.aks.ac.kr/~kimseoyun/101/xml_data.html">XML</a>
+          </li>
+          <li>
+            <a href="https://dh.aks.ac.kr/~kimseoyun/101/table_data.html">Data</a>
+          </li>
+      
+          <li>
+            <a href="https://dh.aks.ac.kr/~kimseoyun/101/analysis.html">Analysis</a>
+          </li>
+          <li>
+            <a href="https://dh.aks.ac.kr/~kimseoyun/101/archive.html">archive</a>
+          </li>
+          <li>
+            <a href="https://dh.aks.ac.kr/~kimseoyun/101/references.html">References</a>
+          </li>
+
+
+      </div>
+      <li style="float: right">
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/about.html">About</a>
+      </li>
+    </ul>
+    <img src="https://dh.aks.ac.kr/~kimseoyun/icon/confucius.jpg" />
+
+    <div class="container-fluid content">
+      <h1 align="center">데이터 분석 및 시각화</h1>
+
+      <p>
+        위와 같이 정리된 세 책의 테이블 데이터를 확인해 보면, 『사변록』에서는
+        총 15회의 인용 관계가 나타났으며, 『녹문집』에서는 43회,
+        『경사강의』에서는 74회가 나타난 것을 알 수 있다. 아래의 표는 학이편
+        전체 문장에 대한 인용 문장의 비율을 계산한 것이다.
+      </p>
+
+      <table width="95%">
+        <th style="background-color: wheat">분석대상</th>
+        <th>총 문장수</th>
+        <th>인용 문장수</th>
+        <th>인용문 비율</th>
+
+        <tr>
+          <td style="background-color: wheat" align="center">
+            사변록·논어·학이편
+          </td>
+          <td align="center">25</td>
+          <td align="center">15</td>
+          <td align="center">60%</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">
+            녹문집·논어·학이편
+          </td>
+          <td align="center">63</td>
+          <td align="center">43</td>
+          <td align="center">68%</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">
+            경사강의·논어·학이편
+          </td>
+          <td align="center">84</td>
+          <td align="center">74</td>
+          <td align="center">87%</td>
+        </tr>
+      </table>
+      <p>
+        『사변록』은 학이편 25구의 문장 중에서 총 15회로 60%의 인용 관계가
+        나타났고, 『녹문집』은 63구의 문장 중에서 총 43회로 68%의 인용 관계가
+        나타나며, 『경사강의』는 84구의 조문과 조대 중에서 총 73회로 87%의 인용
+        관계가 나타난다. 이러한 결과를 통해 『경사강의』는 대부분의 논의가
+        인용을 통해 이루어졌고, 『사변록』이나 『녹문집』 역시 절반이 넘는
+        문장에서 인용을 사용하고 있음을 알 수 있다.
+      </p>
+      <p>
+        다음은 이 세 책에서 인용된 문헌과 피인용자의 인용 빈도이다.
+        『논어집주』라는 문헌을 인용했다고 하더라도 『논어집주』에 실린 정자나
+        사량좌 등의 설을 인용하는 경우가 있으므로 피인용자가 모두 주희가 되는
+        것은 아니다. 그러므로 본고에서는 이 점에 유의하여 ‘문헌과 문헌’ 및
+        ‘인물과 인물’간의 인용 관계로 나누어 표를 작성하였다.
+      </p>
+
+      <table width="95%">
+        <th width="15%" style="background-color: wheat">출처문헌</th>
+        <th width="15%">논어집주</th>
+        <th width="15%">논어</th>
+        <th width="15%">사서대전</th>
+        <th width="15%">주자어류</th>
+        <th width="15%">기타</th>
+        <th>총계</th>
+
+        <tr>
+          <td style="background-color: wheat" align="center">사변록</td>
+          <td align="center">12 (80%)</td>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">2</td>
+          <td align="center">1</td>
+          <td align="center">15</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">녹문집</td>
+          <td align="center">27 (63%)</td>
+          <td align="center">1</td>
+          <td align="center">5</td>
+          <td align="center">4</td>
+          <td align="center">11</td>
+          <td align="center">43</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">경사강의</td>
+          <td align="center">25 (34%)</td>
+          <td align="center">24 (32%)</td>
+          <td align="center">1</td>
+          <td align="center">12</td>
+          <td align="center">12</td>
+          <td align="center">74</td>
+        </tr>
+      </table>
+
+      <br />
+
+      <table width="95%">
+        <th width="15%" style="background-color: wheat">피인용자</th>
+        <th width="15%">주희</th>
+        <th width="15%">공자</th>
+        <th width="15%">정자</th>
+        <th width="15%">사량좌</th>
+        <th width="15%">기타</th>
+        <th>총계</th>
+
+        <tr>
+          <td style="background-color: wheat" align="center">박세당</td>
+          <td align="center">8 (53%)</td>
+          <td align="center">0</td>
+          <td align="center">1</td>
+          <td align="center">2</td>
+          <td align="center">4</td>
+          <td align="center">15</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">임성주</td>
+          <td align="center">24 (56%)</td>
+          <td align="center">0</td>
+          <td align="center">10 (23%)</td>
+          <td align="center">1</td>
+          <td align="center">8</td>
+          <td align="center">43</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">정조</td>
+          <td align="center">33 (45%)</td>
+          <td align="center">21 (29%)</td>
+          <td align="center">2</td>
+          <td align="center">2</td>
+          <td align="center">16</td>
+          <td align="center">74</td>
+        </tr>
+      </table>
+
+      <p>
+        17~18세기 조선유학은 주자학이 지배적이었다는 사실을 뒷받침 해주듯이
+        『사변록』, 『녹문집』, 『경사강의』 모두 문헌은 『논어집주』를, 인물은
+        주희를 가장 많이 인용했다. 『사변록』에서는 『논어집주』를 12회
+        인용하였으며, 『녹문집』에서는 27회, 『경사강의』에서는 25회를
+        인용했는데, 『경사강의』에서 『논어』를 『논어집주』와 비슷한 빈도인
+        24회 인용한 것으로 보아, 중국 주석 뿐만 아니라 경문의 의미 자체에도
+        집중했던 것을 알 수 있다. 아울러, 박세당은 주희를 8회 인용했고, 임성주는
+        주희를 24회, 정자를 10회 인용했으며, 정조는 주희를 33회, 공자를 21회
+        인용하였다.
+      </p>
+      <p>
+        이 결과를 Gephi로 시각화하면 아래와 같다. (Gephi는 오픈 소스로 공개되어
+        있어 해당 사이트(https://gephi.org/)에서 무료로 다운로드 후 사용할 수
+        있는데, 현재 다운로드 가능한 버전은 0.10이다.) Gephi를 활용하여 제작한
+        그래프는 텍스트에서 사용된 개념어를 나타내는 노드(Node)와 개념어 사이의
+        연결 정도(Edge Weight)를 보여주는 선(Line)인 엣지(Edge)로 이루어져 있다.
+        서로 연관성이 많을수록 노드의 크기가 커지고 가까워지며 엣지는 굵고
+        진하게 나타난다. 반대로 연관성이 적을수록 노드는 크기가 작아지고
+        멀어지며 엣지는 가늘고 연하게 보여주는 것이다.
+      </p>
+      <div class="img">
+        <img
+          align="center"
+          src="https://dh.aks.ac.kr/~kimseoyun/icon/gephi_image011.png"
+        />
+        <p align="center">문헌간 인용 관계 시각화</p>
+        <img
+          align="center"
+          src="https://dh.aks.ac.kr/~kimseoyun/icon/gephi_image021.png"
+        />
+        <p align="center">인물간 인용 관계 시각화</p>
+      </div>
+      <br />
+      <p>
+        위의 시각화 결과를 보면, 1회만 인용된 문헌이나 인물들은 가느다란 선으로
+        멀리에 배치된 것을 볼 수 있다. 또 『사변록』과 『녹문집』,
+        『경사강의』에서 동시에 인용한 문헌은 세 책의 중간에 위치하는 것을 볼 수
+        있는데, 이 그래프를 통해 『논어집주』외에도 『주자어류』가 세 책에서
+        모두 인용되었다는 것을 알 수 있으며, 『녹문집』과 『경사강의』에서
+        동시에 인용한 문헌은 『논어』, 『사서대전』,
+        『맹자집주』,『근사록집해』가 있음을 알 수 있다. 인물간 인용 관계 역시
+        세 학자는 주희 외에도 정자와 사량좌를 공통적으로 인용했으며, 임성주와
+        정조는 모두 맹자와 윤돈을 인용했음을 알 수 있다.
+      </p>
+      <p>
+        다음은 앞서 소개한 인용정보 및 인용형태에 대한 데이터의 통계를 표로
+        정리한 것이다.
+      </p>
+
+      <table width="95%">
+        <th width="10%" style="background-color: wheat">분류1</th>
+        <th width="10%" style="background-color: wheat">분류2</th>
+        <th width="10%">사변록</th>
+        <th width="10%">녹문집</th>
+        <th width="10%">경사강의</th>
+
+        <tr>
+          <td rowspan="3" style="background-color: wheat" align="center">인용정보</td>
+          <th width="10%" style="background-color: wheat">經引</td>
+          <td align="center">1 (7%)</td>
+          <td align="center">4 (9%)</td>
+          <td align="center">25 (34%)</td>
+        </tr>
+
+        <tr>
+          <th width="10%" style="background-color: wheat">中引</td>
+          <td align="center">14 (93%)</td>
+          <td align="center">39 (91%)</td>
+          <td align="center">48 (66%)</td>
+        </tr>
+
+        <tr>
+          <th width="10%" style="background-color: wheat">韓引</td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="3" style="background-color: wheat" align="center">인용어 유무</td>
+          <th width="10%" style="background-color: wheat">明引</td>
+          <td align="center">14 (93%)</td>
+          <td align="center">20 (47%)</td>
+          <td align="center">29 (39%)</td>
+        </tr>
+
+        <tr>
+          <th width="10%" style="background-color: wheat">藏引</td>
+          <td align="center">1 (7%)</td>
+          <td align="center">14 (33%)</td>
+          <td align="center">33 (45%)</td>
+        </tr>
+
+        <tr>
+          <th width="10%" style="background-color: wheat">暗引</td>
+          <td align="center"></td>
+          <td align="center">9 (21%)</td>
+          <td align="center">11 (15%)</td>
+        </tr>
+        
+        <tr>
+          <td rowspan="3" style="background-color: wheat" align="center">유사도</td>
+          <th width="10%" style="background-color: wheat">全引</td>
+          <td align="center">5 (33%)</td>
+          <td align="center">5 (12%)</td>
+          <td align="center">14 (19%)</td>
+        </tr>
+
+        <tr>
+          <th width="10%" style="background-color: wheat">改引</td>
+          <td align="center">5 (33%)</td>
+          <td align="center">9 (21%)</td>
+          <td align="center">23 (31%)</td>
+        </tr>
+
+        <tr>
+          <th width="10%" style="background-color: wheat">摘引</td>
+          <td align="center">5 (33%)</td>
+          <td align="center">29 (67%)</td>
+          <td align="center">36 (49%)</td>
+        </tr>
+        
+        <tr>
+          <td rowspan="4" style="background-color: wheat" align="center">인용형태</td>
+          <th width="10%" style="background-color: wheat">分引</td>
+          <td align="center">7 (47%)</td>
+          <td align="center">15 (35%)</td>
+          <td align="center">11 (15%)</td>
+        </tr>
+
+        <tr>
+          <th width="10%" style="background-color: wheat">合引</td>
+          <td align="center"> </td>
+          <td align="center">3 (7%)</td>
+          <td align="center">10 (14%)</td>
+        </tr>
+
+        <tr>
+          <th width="10%" style="background-color: wheat">連引</td>
+          <td align="center">7 (47%)</td>
+          <td align="center">17 (40%)</td>
+          <td align="center">26 (35%)</td>
+        </tr>
+        <tr>
+          <th width="10%" style="background-color: wheat">複引</td>
+          <td align="center"></td>
+          <td align="center"> </td>
+          <td align="center">7 (9%)</td>
+        </tr>
+      </table>
+
+      <p>
+        인용정보에 대한 통계를 보아도, 정조는 다른 학자들에 비해
+        『논어』나『맹자』등의 경문을 25회 인용 함으로써 7~9%의 다른 책에 비해
+        34%라는 높은 인용 비율을 보여주고 있다. 또한 정조나 문신들은 인용문의
+        출처를 굳이 밝히지 않아도 서로 어느 부분을 말하는 것인지 이해할 수 있기
+        때문에, 인명이나 서명을 생략해서 문장만 인용하는 藏引의 방식을 주로
+        사용하고 있으며(45%), 심지어 문장 중에서도 중요한 부분만 요약적으로
+        언급하는 摘引의 방식을 주로 사용하고 있다(49%). 또 한번의 질문에 여러
+        문장을 연속해서 인용하는 連引의 방식을 많이 사용하며(35%), 한 문장을
+        나누어 두 개 이상의 문장인 것처럼 인용하는 分引, 서로 다른 출처의 문장을
+        하나의 문장인 것처럼 합쳐서 인용하는 合引, 같은 문장을 여러 번 반복하는
+        複引의 방식을 모두 사용하고 있다.
+      </p>
+      <p>
+        임성주는 누구의 설인지와 그 문장까지 함께 밝히는 明引의 방식을 주로
+        사용하지만(47%), 문장 전체를 말하는 것이 아니라 요약해서 인용하는 摘引의
+        방식을 주로 사용하고 있다(67%).
+      </p>
+      <p>
+        박세당 역시 누구의 설인지 인명과 인용하고 있는 문장을 함께 밝히는 明引
+        방식이 대부분이지만(93%), 그 인용한 문장을 변형해서 쓰기도 하고(改引),
+        그대로 쓰기도 하며(全引), 요약해서 쓰는(摘引) 다양한 방식을 채택하고
+        있다. 다음은 이를 네트워크 그래프로 시각화한 것이다.
+      </p>
+
+      <div class="img">
+        <img src="https://dh.aks.ac.kr/~kimseoyun/icon/gephi_image08.jpg" />
+        <p align="center">인용정보 시각화</p>
+        <img src="https://dh.aks.ac.kr/~kimseoyun/icon/gephi_image09.jpg" />
+        <p align="center">인용형태 시각화</p>
+      </div>
+      <br />
+      <p>
+        다음은 <b>인용목적</b>에 대한 통계와 네트워크 그래프이다. 세 책의
+        인용률이 가장 높은 문헌이 『논어집주』이고 인물이 주희인 것을 감안
+        하였을 때, 아래의 결과는 세 인물의 주자학에 대한 인식을 엿볼 수 있는
+        부분이라고 할 수 있다.
+      </p>
+
+      <table width="95%">
+        <th width="15%" style="background-color: wheat">분류</th>
+        <th>사변록</th>
+        <th>녹문집</th>
+        <th>경사강의</th>
+
+        <tr>
+          <td style="background-color: wheat" align="center">正引</td>
+          <td align="center"></td>
+          <td align="center">12 (28%)</td>
+          <td align="center">16 (22%)</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">借引</td>
+          <td align="center">1 (7%)</td>
+          <td align="center">22 (51%)</td>
+          <td align="center">18 (24%)</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">疑引</td>
+          <td align="center">1 (7%)</td>
+          <td align="center">1 (2%)</td>
+          <td align="center">29 (39%)</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">補引</td>
+          <td align="center">7 (47%)</td>
+          <td align="center">5 (12%)</td>
+          <td align="center">8 (11%)</td>
+        </tr>
+
+        <tr>
+          <td style="background-color: wheat" align="center">駁引</td>
+          <td align="center">6 (40%)</td>
+          <td align="center">3 (7%)</td>
+          <td align="center">3 (4%)</td>
+        </tr>
+      </table>
+      <p>
+
+      <div class="img">
+        <img src="https://dh.aks.ac.kr/~kimseoyun/icon/gephi_image071.PNG" />
+        <p align="center">인용목적 시각화</p>
+      </div>
+      <br />
+      『사변록』은 기존 설의 미진한 부분을 보충하는 補引이 7회(47%), 반박하는
+      駁引이 6회(40%)로, 『논어집주』와 주희에 대한 견해가 매우 부정적이라고
+      할 수 있다. 박세당은 주자의 설에 대해 “모두 극진히 추리(推理)한 말이나,
+      모두 공자께서 말한 뜻과는 어긋나는 것이니, 아마도 읽는 사람들로 하여금
+      도리어 의심을 일으키게 될 것이다. [盖皆推極之言 然皆在夫子所言之外
+      恐妨讀者反生疑晦耳]”라고 말했다. 앞서 박세당의 학문경향에 대해, “유학의
+      근본 정신을 추구하였으며, 중국 중심적 학문 태도에 회의적이다.”라고
+      했는데, 인용관계 분석 결과 긍정이 7%, 중립이 7%, 부정이 87%를 차지하는
+      것을 통해 주자학 중심의 학문 태도에 회의적이었음을 확인할 수 있다.
+      다음은 인용목적에 대한 통계를 시각화 한 것으로, 사변록 가까이에 駁引과
+      補引이 위치해 있는 것을 볼 수 있다.
+    </p>
+      <p>
+        『녹문집』은 기존의 설로 자신의 견해를 대신하는 借引이 22회(51%),
+        전적으로 동감하는 正引이 12회(28%)으로, 그래프에서도 借引과 正引에 더
+        굵은 선으로 연결된 것을 볼 수 있으며, 박세당과 반대로 매우 긍정적이라고
+        할 수 있다.
+      </p>
+      <p>
+        『논어』해석에서 그는 “주자는 여기에는 한 글자도 허투루 놓은 것이 없다고
+        했는데, 나는 또 한 글자도 고칠 수가 없다고 말하겠다. [朱子謂此無一字虛設
+        愚又以爲一字]”라든가, “이는 모두 理를 가지고 말한 것으로서, 이곳의 註와
+        합치하는 것이다. [此皆以理言之而與此註合焉者也]”, ”主於敬의 아래에
+        出於自然의 뜻이 없기 때문에 얼른 파악하기가 어려우나, 깊이 체득하면
+        集註와 다름이 없음을 알 수 있다. [主於敬下無出於自然之意故却難看
+        然深體之與集註無異也]”와 같은 문장을 사용함으로써 주자의 해석에 권위를
+        싣고 있다.
+      </p>
+      <p>
+        또한 임성주는 『논어』를 해석함에 있어서 『사서대전』이나 『주자어류』
+        등을 참고하여 그의 철학을 전개해 나갔는데, 조선에서는 16세기 이후 이와
+        같은 저서들이 간행되면서 성리학에 대한 깊은 철학적 탐구가 진행되기
+        시작되었다. 그중에서도 임성주는 조선 후기 성리학의 6대가 중 한 명으로,
+        이기론에 대한 균형적 사고를 확립함으로써 성리학의 새로운 지평을 열었던
+        인물이다. 이 때문에 앞서 학문경향에서 임성주에 대해 “이기를 기일원론적
+        관념으로 통일함으로써 조선시대 성리학의 결정(結晶)을 이루었다.”라고
+        평가했던 것이다.
+      </p>
+      <p>
+        『경사강의』는 기존의 설에 의문을 갖는 疑引이 29회(39%)이고,
+        그래프에서도 疑引에 가장 굵은 선으로 연결된 것을 볼 수 있으며, 借引이
+        18회(24%), 正引이 16회(22%)이므로 여기에도 굵은 선으로 연결되어 있다.
+        현재까지 정조의 학문에 대한 연구가 300여 편이 넘지만 아직도 주자학에
+        대한 정조의 학문 태도를 한 마디로 정의할 만한 일치된 견해는 없는
+        상황이다. 정조가 주자학을 正學이라고 했기 때문에 철저한 성리학
+        신봉자였다고 보는 입장이 있고, 『경사강의』에 나타나는 주자의 해석에
+        대한 비판적인 시각 때문에 비주자학자라고 보는 입장도 있다. 더 많은
+        데이터를 가지고 분석해야겠지만, 본고에서 정리한 결과를 볼 때 정조의
+        학문태도를 ‘주자학을 인순하는데 만족하지 않은 비판적
+        회의주의자’라고 정의했던 한형조 교수의 설이 가장 타당하다고 생각한다.(한형조, 「正祖의 學問觀 : 朱子學의 批判的 復古」, 한국학중앙연구원, 『장서각』제3집, 2000.)
+      </p>
+      <p>
+        정조는 경전을 존중하려면 주자를 존중할 줄 알아야 한다고 했다. 주자를
+        존숭하는데 요령이 있는데, 그것은 “의심하지 않았던 곳에서 의문을 갖고,
+        의문을 가졌던 곳에서 의심을 해소하는 것[無疑而有疑
+        有疑而無疑]” 이다.(『弘齋全書』卷五十, 「策問三·大學」) 정조는 주자학의 진정한 고질이 그것을 맹목적으로 지키겠다는 사람들,
+        주자학 자체에 대해 한 점의 의혹도 논평도 없고, 그리하여 이에 반하는
+        해석을 용납하지 않는 고루한 권위주의적 태도라고 보았다. 이 때문에 정조는
+        주자학의 복고를 기획했으며, 이를 위해 다양한 학문정책을 펴기도 했다.
+        주자학을 정통으로 존중하면서도 거기서 모호한 부분을 밝히고, 빠진 부분을
+        보충하며, 문제가 되는 부분을 수정해 나가 주자학에 기반한 경학의 새
+        모델을 정착하고 보급시키는 것이 정조가 기획한 주자학의 복고였다.
+      </p>
+      <p>
+        이와 같은 한형조 교수의 논의는, 긍정이 46%, 중립이 39%, 부정이 15%로
+        나타나는 본고에서의 분석 결과와도 일치하며, 또 앞서 학문 경향에서
+        밝혔듯이 “경문의 의미, 聖人의 위상과 역할, 주자학적 해석 방식,
+        학문과 정치의 관계 등 다양한 맥락의 질문을 던짐으로써 학문적‧정치적 담론
+        공간을 확장시켰다.”는 평가와도 일맥상통한다고 할 수 있다.
+      </p>
+
+
+      <p>지금까지 특정 경문에 대한 여러 주석의 인용 양상을 체계화하여 데이터로 정리해보고, 네트워크 그래프를 통해 이를 시각화하여 각 주석들간 관점의 차이를 파악해 보았다. 유가가 한자문화권 전통사상에서 주류의 위치를 차지해 왔다는 점에서, 이와 같이 유학경전에 대한 해석학적 관점을 살피는 일은 동아시아의 정신사 내지 문명사를 정확하게 이해하는 단초가 될 수 있을 것이다. 지금은 조선시대 논어 주석에 한정되어 있으나, 추후 여러 연구자들과 연구방법을 공유함으로써 연구 대상을 동아시아 경학으로 확장시키고, 시대별ㆍ국가별 주석의 차이를 연구하는 것이 본 연구의 최종 목표이다.</p>
+    </div>
+
+
+
+  </body>
+</html>

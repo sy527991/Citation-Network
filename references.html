@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>references</title>
+    <style>
+            a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 100);
+      }
+
+      a:hover {
+        color: rgba(13, 36, 242, 0.9);
+      }
+
+      ul {
+        list-style-type: none; /*Removes the bullet points*/
+        margin: 0; /*moves list up*/
+        padding: 0; /*moved the list to the left, against the left side*/
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /*keeps the navigation bar at the top of the page when scrolling*/
+        top: 0; /*top and width tell where the navigation bar should stay. If you wanted it fixed at the bottom you'd type bottom instead of top*/
+        width: 100%;
+      }
+
+      li {
+        float: left; /*put everything on one line*/
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px; /*spaced the words out*/
+        text-decoration: none; /*removed the underline from each word*/
+      }
+
+      li a:hover {
+        background-color: #111; /*makes it so the color changes behind each word when you hover over it*/
+      }
+
+      .Contact-Button {
+        position: relative;
+        display: block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 10px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      table, th, td{
+    border : 1px solid rgb(0, 0, 16);
+    border-collapse: collapse;
+    background-color: rgb(252, 247, 239);
+    text-align: center
+      }
+
+      .content {
+        padding: 15px;
+        background-color: #ffffff;
+        margin: 15px;
+      }
+      .container {
+        max-width: 1400px !important;
+        margin: 50px 0;
+        font-family: 'Open Sans';
+      }
+
+      .container {
+        box-sizing: border-box;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/preface.html">Preface</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/citation.html">Citation</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/table_data.html">Data</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/xml_data.html">XML</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/analysis.html">Analysis</a>
+      </li>
+      <li>
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/references.html">References</a>
+      </li>
+
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+          <a href="#">Link 6</a>
+        </div>
+      </div>
+      <li style="float: right">
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/about.html">About</a>
+      </li>
+    </ul>
+    <img src="https://dh.aks.ac.kr/~kimseoyun/icon/confucius_about.jpg"/>
+
+    <div class="container-fluid content">
+  
+
+    <h1 align="center">학술논문 발표자료</h1>
+
+        <table width="80%" 
+        align="center" 
+        height="300" >
+
+          <th>날짜</th>
+          <th>내용</th>
+          <th>논문 및 연구노트</th>
+
+          <tr>
+            <td>2024.07.31</td>
+            <td><a href="https://itkc.jams.or.kr/co/com/EgovMenu.kci?s_url=/sj/search/sjSereClasList.kci&s_MenuId=MENU-000000000053000&accnId=null">한국고전번역원 『민족문화』제67집</a></td>
+            <td><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003105428">(KCI)조선시대 논어주석의 인용 분류체계 -디지털 경전주석학 연구 시론-</a></td>
+          </tr>
+          
+          <tr>
+            <td>2024.08.09</td>
+            <td><a href="https://woohan.jams.or.kr/co/com/EgovMenu.kci?s_url=/po/community/notice/noticeView.kci&s_MenuId=MENU-000000000061000&notiSeq=000000042523">2024년 우리한문학회 하계학술대회</a></td>
+            <td><a href="https://pdfviewer.softgateon.net/?state=%7B%22ids%22:%5B%221fuH7ewCFrRQA_QOCKssVXp6hQil-_cDO%22%5D,%22action%22:%22open%22,%22userId%22:%22109540508334321155655%22,%22resourceKeys%22:%7B%7D%7D">(발표집)조선시대 『논어』주석 인용관계망 연구.pdf</a></td>
+          </tr>
+
+          <tr>
+            <td>2024.08.30</td>
+            <td><a href="https://dh.aks.ac.kr/wiki/index.php/DH_Workshop_2024_08_30">한중연 인문정보학 학위청구논문 예비발표</a></td>
+            <td>학위청구 논문심사 발표문.docs</td>
+          </tr>
+
+          <tr>
+            <td>2024.10.18</td>
+            <td><a href="https://drive.google.com/file/d/10oRyeK9pSuB1y-eaQouWihh6IrLMgWcS/view?usp=sharing">베트남 하노이국립대 학술대회</a></td>
+            <td>제12회 세계한국학대회 발표문.docs</td>
+          </tr>
+
+          <tr>
+            <td>2024.11.30</td>
+            <td><a href="https://sites.google.com/view/dadh2024/home">대만 사범대 DADH 2024 국제학술대회</a></td>
+            <td>(가제)Docusky를 활용한 조선시대 경학자료 인용관계 아카이브.pdf</td>
+          </tr>
+
+          <tr>
+            <td>2024.12.31</td>
+            <td><a href="https://ksq.jams.or.kr/">한국학중앙연구원 『한국학』 제45집 투고</a></td>
+            <td>(가제)한국경학자료시스템 TEI-XML 전자문서 편찬.pdf</td>
+          </tr>
+
+          <tr>
+            <td>2025.01.31</td>
+            <td><a href="https://woohan.jams.or.kr/">단국대 우리한문학회 『한문학보』 제51집 투고</a></td>
+            <td>(가제)조선시대 『논어』 주석 인용관계망 연구.pdf</td>
+          </tr>
+
+          <tr>
+            <td>2025.02.28</td>
+            <td>한중연 인문정보학 학위청구논문 최종심사</td>
+            <td>조선시대 논어 주석의 인용 관계망: 데이터 설계 및 시각화.docs</td>
+          </tr>
+
+        </table>
+
+
+
+
+      <header>
+        <h1 align="center">참고문헌</h1>
+      </header>
+
+        <h2>원전자료</h2>
+        <p>正祖,『弘齋全書』</p>
+        <p>丁若鏞,『論語古今註』</p>
+        <p>李德弘,『艮齋先生續集』</p>
+        <p>任聖周,『鹿門集』</p>
+        <p>朴世堂,『思辨錄』</p>
+        <p>班固,『白虎通』</p>
+        <p>阮元,『經籍纂詁』</p>
+        <p>張華,『博物志』</p>
+        <h2>단행본</h2>
+        <p>張隆溪,『道與邏各斯：東西方文學闡釋學』, 江蘇敎育出版社, 2006.</p>
+        <p>徐仁甫,『古書引語硏究』, 中華書局, 2014.</p>
+        <p>汪耀楠 著, 신승운 譯,『주석학개론』, 한국고전번역원, 2014.</p>
+        <p>조국장·왕장공·강경백 著, 이동철 譯, 『문사공구서개론』, 한국고전번역원, 2015.</p>
+        <p>김현·김바로·임영상,『디지털 인문학 입문』, HUEBOOKs, 2016.</p>
+        <p>郭錫良·唐作藩·何九盈·蔣紹愚·田瑞娟 著, 학이사 譯,『고대중국어 : 한문학습의 길잡이』, 역락, 2016.</p>
+        <p>張隆溪 著, 陳川 譯,『The Tao(道) and the Logos』, 四川人民出版社, 2018.</p>
+        <p>이영호,『동아시아 논어학』, 성균관대학교 출판부, 2019.</p>
+        <h3>학술논문</h3>
+        <p>김영호, ｢丁茶山의 論語解釋에 관한 硏究｣, 성균관대학교 박사학위논문, 1994. </p>
+        <p>이영호, ｢조선 논어학의 형성과 전개양상｣, 『동양철학연구』제59집, 동양철학연구회, 2009.</p>
+        <p><a href="http://digerati.aks.ac.kr/paper/paper2018-3/디지털인문학교육의현장.pdf">김현, ｢디지털 인문학 교육의 현장｣,『인문콘텐츠』제50집, 2018.</a></p>
+        <p><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001020968">김현, ｢고문헌 자료 XML 전자문서 편찬 기술에 관한 연구｣, 『고문서연구』제29호, 한국고문서학회, 2006.</a></p>
+        <p><a href="https://www.dropbox.com/scl/fi/4ptgk4nrdu5o0ld6x43rf/DasanDatabase170513.pdf?e=2&rlkey=af38msazcan0z5j5evwdb34w9&dl=0">김현, ｢다산 저작 텍스트의 전자정보화를 위한 온톨로지 설계」,『세계사 속의 다산학』고전자료의 현대화 연구과제(AKSR20160-J08), 한국학중앙연구, 2017.</a></p>
+        <p><a href="http://digerati.aks.ac.kr/paper/paper2018-1/디지털시대의한문학.htm">김현,「디지털 시대의 漢文學: 데이터로 소통하는 고전 인문 지식」,『漢文學論集』 제49집, 근역한문학회. 2018.</a></p>
+        <p><a href="https://accesson.kr/kjdh/v.1/1/4/43504">김현, ｢디지털 큐레이션: 미래 세대를 위한 디지털 인문학 교육｣, 『디지털인문학』창간호, 디지털인문학협의회, 2024.</a></p>
+        <p>박유리, ｢한문의 내포문 구성 연구｣, 『석당논총』제39집, 동아대학교 석당학술원, 2007.</p>
+        <p>강민구, ｢조선 후기 유서(類書)의 변개(變改) 양상(樣相) -『송남잡식(松南雜識)』의 경우｣, 『동방한문학』제38집, 동방한문학회, 2009.</p>
+        <p>김경호·류준필·이영호, ｢韓國儒學資料의 匯集과 電算化 -‘한국경학자료시스템’과 ‘한국주자학용어검색시스템’을 중심으로-｣, 『동방한문학』제41집, 동방한문학회, 2009.</p>
+        <p>홍상훈, ｢『三寶太監西洋記通俗演義』의 詩文 引用 및 變容 樣相｣. 『중국문학』제79집, 한국중국어문학회, 2014.</p>
+        <p>진예숙, ｢『大學』의 引用 詩 硏究 - 集註와 小註를 중심으로｣, 『漢文古典硏究』제31집, 한국한문고전학회, 2015.</p>
+        <p>김바로, ｢역사기록의 전자문서 편찬방법 탐구 - 역사요소를 중심으로 -｣, 『열상고전연구』제51집, 열상고전연구회, 2016.</p>
+        <p>홍정욱, ｢디지털기술 전환 시대의 인문학｣,『인문콘텐츠』제38집, 인문콘텐츠학회, 2015.</p>
+        <p>유인태, ｢디지털 인문학과 한문학 연구 – 고문헌 자료 대상 국내 디지털 인문학 연구 사례를 중심으로｣,『한문학논집』제49집, 근역한문학회, 2018.</p>
+        <p>이영호·함영대, ｢디지털 경전주석학의 모색 ― 한국경학자료시스템을 중심으로｣,『대동문화연구』, 성균관대학교 대동문화연구원, 2018.</p>
+        <p>우지영, ｢四書의『詩經』인용 양상에 대한 일고찰｣,『동방한문학』제78집, 동방한문학회, 2019.</p>
+        <p>조선애, ｢『芝峯類說』의 문헌 간 인용관계망 구현 연구｣, 한국학중앙연구원 한국학대학원 석사학위논문, 2020.</p>
+        <p>안승우, ｢한국 유교 디지털 아카이브 구축 현황과 제언｣,『동양철학연구』제103집, 동양철학연구회, 2020.</p>
+        <p>구지현·최재원, ｢김태준의 朝鮮漢文學史의 인용 문헌 활용 양상 연구｣,『열상고전연구』제77집, 열상고전연구회, 2022.</p>
+        <p>한희연·지영원·호정·유인태, ｢한국 詩話 시맨틱 데이터 아카이브 구현 방안 모색 - 詩話叢林 대상 개념적 데이터 모델링을 중심으로｣,『한문학논집』제49집, 근역한문학회, 2022.</p>
+        <p>최진석·김병준·허예슬·최주찬·황호덕, ｢김윤식과 우리 시대, 인용의 인구사회학적 시좌 - 현대문학연구자의 성별 및 세대별 김윤식 저술 인용양상,『국제어문』제96집, 국제어문학회, 2023.</p>
+        <p>김서윤, 「조선시대 논어주석의 인용 분류체계 -디지털 경전주석학 연구 시론-」, 『민족문화』 제67집, 한국고전번역원, 2024.</p>
+        <p>김준희, 「민담 구성요소 간 관계의 네트워크 시각화 방안 시론 – <여우누이>를 대상으로」, 韓國古典文學會, 『古典文學硏究』제65집, 2024.</p>
+        <p>김성문·이기성, 「디지털 기법을 활용한 시조의 ‘새(鳥)’ 수용 양상 고찰 -『韓國時調大事典』 수록 작품을 중심으로-」, 동아시아고대학회,『동아시아고대학』제70집, 2023.</p>
+        <p>전성규, 「근대 지식인 단체 네트워크(2)- 『동인학보』, 『태극학보』, 『공수학보』, 『 낙동친목회학보』, 『대한학회월보』, 『대한흥학보』, 『학계보』, 『학지광』등 재일조선인유학생 단체 회보(1906~1919)를 중심으로」, 한국근대문학회, 『한국근대문학연구』제23집 2권, 2022.</p>
+        <p>전성규·허예슬·이여진·최장락, 「근대 계몽기 지식인 단체 네트워크 분석 -학회보 및 협회보(1906~1910)를 중심으로」, 상허학회, 『상허학보』제65집, 2022.</p>
+        <p>진영하, 「한·중 시간 개념화 양상 대조 -의존 명사 ‘시간/小時’ 관련 표현을 중심으로-」, 한민족문화학회, 『한민족문화연구 』제71집, 2020.</p>
+        <p>이병찬,「『한국문집총간』 엔그램 분석 프로그램 개발 연구」, 한국한문학회, 『韓國漢文學硏究』제77집, 2020.</p>
+        <p>이병찬, 「빅데이터 분석 방법을 활용한 한시 영향관계 분석을 위한 시론」, 한국어문교육연구회, 『어문연구』제94집, 2017.</p>
+        <p>김성문·김바로, 「디지털 분석 기법을 활용한 시조 연구 방법 탐색 -『한국시조대사전』 수록 단형시조를 중심으로-」, 중앙대학교 문화콘텐츠기술연구원, 『다문화콘텐츠연구』제34집, 2020.</p>
+        <p>최운호·김동건, 「<흥부전> 이본의 내용 유형에 따른 군집 분석 연구」, 아이씨티플랫폼학회, , 『JOURNAL OF PLATFORM TECHNOLOGY』 제11집 5권, 2023.</p>
+        <p>한형조, 「正祖의 學問觀 : 朱子學의 批判的 復古」, 한국학중앙연구원, 『장서각』제3집, 2000.</p>
+        <p>하나, 「퇴계·율곡의 융합과 변용으로서 성호 이익의 사단칠정론 : 도설(圖說)과 네트워크 분석을 활용하여」, 국내박사학위논문, 성균관대학교 일반대학원, 2023.</p>
+        <p>민경주,「한문 고전 데이터 시각화 방법 연구」, 국내박사학위논문, 충남대학교 대학원, 2024.</p>
+        <h2>웹사이트</h2>
+        <p>지식정보자원관리사업. https://www.kdevelopedia.org/Resources/view/04201311050128832.do (검색일 : 2024.06.08.)</p>
+        <p>W3C XML 1.0. https://www.w3.org/TR/xml/(검색일 : 2024.06.08.)</p>
+        <p>성균관대학교 대동문화연구원 한국경학자료시스템. http://koco.skku.edu/(검색일 : 2024.06.08.)</p>
+        <p>한국고전번역원. http://www.itkc.or.kr(검색일 : 2024.06.08.)</p>
+        <p>성균관대학교 동아시아학술원 한국유경 DB. http://ygc.skku.edu/ (검색일 : 2024.06.08.)</p>
+        <p>MARKUS https://dh.chinese-empires.eu/MARKUS/beta/ (검색일 : 2024.06.08.)</p>
+        <p>Gephi. https://gephi.org/(검색일: 2024.08.06)</p>
+        <p>한국민족대백과사전. https://encykorea.aks.ac.kr/(검색일: 2024.08.06)</p>
+        <p><a href="https://wikidocs.net/book/14569">XML(TEI) with 인문학 - 디지털인문학 시리즈</a> (검색일: 2024.8.30)</p>
+      </div>
+
+    </div>
+  </body>
+</html>

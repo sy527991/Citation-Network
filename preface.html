@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>preface</title>
+
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 100);
+      }
+
+      a:hover {
+        color: rgba(13, 36, 242, 0.9);
+      }
+
+      ul {
+        list-style-type: none; /*Removes the bullet points*/
+        margin: 0; /*moves list up*/
+        padding: 0; /*moved the list to the left, against the left side*/
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /*keeps the navigation bar at the top of the page when scrolling*/
+        top: 0; /*top and width tell where the navigation bar should stay. If you wanted it fixed at the bottom you'd type bottom instead of top*/
+        width: 100%;
+      }
+
+      li {
+        float: left; /*put everything on one line*/
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px; /*spaced the words out*/
+        text-decoration: none; /*removed the underline from each word*/
+      }
+
+      li a:hover {
+        background-color: #111; /*makes it so the color changes behind each word when you hover over it*/
+      }
+
+      .Contact-Button {
+        position: relative;
+        display: block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 10px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .img {
+        width: 60%;
+        align-self: center;
+        
+      }
+
+      blockquote {
+        background: #eee
+          url(http://www.webcreatorbox.com/sample/images/quote.gif) no-repeat
+          10px 10px;
+        padding: 25px;
+        font-family: Sans-Serif;
+      }
+
+
+      .content {
+        padding: 15px;
+        background-color: #ffffff;
+        margin: 15px;
+      }
+      .container {
+        max-width: 1200px !important;
+        margin: 100px 0;
+        font-family: 'Open Sans';
+      }
+
+      .container {
+        box-sizing: border-box;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+
+
+    </style>
+  </head>
+  <>
+  <ul>
+    <li>
+      <a href="https://dh.aks.ac.kr/~kimseoyun/101/preface.html">Preface</a>
+    </li>
+    <li>
+      <a href="https://dh.aks.ac.kr/~kimseoyun/101/citation.html">Citation</a>
+    </li>
+    <li>
+      <a href="https://dh.aks.ac.kr/~kimseoyun/101/xml_data.html">XML</a>
+    </li>
+    <li>
+      <a href="https://dh.aks.ac.kr/~kimseoyun/101/table_data.html">Data</a>
+    </li>
+
+    <li>
+      <a href="https://dh.aks.ac.kr/~kimseoyun/101/analysis.html">Analysis</a>
+    </li>
+    <li>
+      <a href="https://dh.aks.ac.kr/~kimseoyun/101/archive.html">archive</a>
+    </li>
+    <li>
+      <a href="https://dh.aks.ac.kr/~kimseoyun/101/references.html">References</a>
+    </li>
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+          <a href="#">Link 6</a>
+        </div>
+      </div>
+      <li style="float: right">
+        <a href="https://dh.aks.ac.kr/~kimseoyun/101/about.html">About</a>
+      </li>
+    </ul>
+    <img src="https://dh.aks.ac.kr/~kimseoyun/icon/confucius.jpg" />
+
+    <img src="https://dh.aks.ac.kr/~kimseoyun/icon/qr_code_abstract.jpg" 
+    style="
+    width: 5em;
+    height: 5em;
+    padding: 0.2em;
+    background-color: #e8e8e8;"> 
+
+    <div class="container-fluid content">
+    <h1 align="center">
+      조선시대 논어 주석의 인용 관계망: 데이터 설계 및 시각화
+    </h1>
+    <h3 align="center">
+      A Citation Network of the Joseon Dynasty’s Annotation of the Analects:
+      Data Modeling and Visualization
+    </h3>
+
+    <!-- <blockquote>  
+      <p>
+        연구 목표: 경학 시맨틱 DB 구축하기 위한 기초 환경 마련
+      </p>
+      <p>
+        연구대상: 현재 DB화 되어 있는 경학자료 3책
+      </p>
+      <p>
+        연구방법: 주석간의 인용관계를 나타낼 수 있는 데이터 정리(excel, XML)
+      </p>
+    </blockquote> -->
+    <div class="img" >
+      <h4>디지털 경전주석학</h4>
+    <img src="https://dh.aks.ac.kr/~kimseoyun/icon/process.png" align="center"/> 
+  </div>
+
+
+  <h4>연구배경</h4> 
+    <p>
+      중국 송대 유학자인 융당(融堂) 전시(錢時, 1175∼1244)의
+      『사서관견(四書管見)』이라는 주석서를 번역하면서, 그동안 갇혀있던 성리학적
+      해석의 틀에서 벗어나 다른 방식으로 『논어』를 이해할 수 있게 되었다.
+      조선시대의 여러 주석을 종합적으로 살피는 이번 연구는, 육구연의 심학을
+      계승한 전시가 주희와는 다른 관점으로 경전을 해석함으로써 인문학적 시각을
+      크게 넓혀 주었던 것처럼, 경학을 더욱 폭넓고 유연하게 공부하며 독자들에게 다양한
+      경전해석의 기회를 제공하기 위한 것이다.
+    </p>
+
+  <h4>연구방법</h4> 
+
+    <p>
+      공자 시대 이후로 『논어』는 중국을 비롯한 동아시아 여러 국가의 사상과
+      가치관에 깊은 영향을 미쳤기 때문에, 여타의 경전에 비해 그 주석서가 특히
+      많으며 그 양만큼이나 경학사적 의미 또한 매우 깊다. 한·중·일 삼국의
+      『논어』 주석서 수를 정확히 헤아리는 것은 불가능하지만, 『동아시아
+      논어학』에서 이영호 교수는 중국에 680종, 한국에 120종, 일본에 363종의
+      『논어』 주석서가 현재 남아 있는 것으로 파악하고 있다. 이처럼 방대한
+      자료를 한 사람의 노력으로 모두 탐색하는 것은 현실적으로 불가능한 일이기
+      때문에, 이를 종합적으로 연구하기 위해서는 더 많은 사람들에게 지식이 확산될
+      수 있도록 디지털 환경에서 편찬되어야 할 것이다.
+    </p>
+
+    <p>
+      고전 문헌 자료를 디지털 환경에서 편찬되기 위해서는 원시자료(raw data)를
+      기계 가독적(machine readable)인 구조 데이터로 변환할 수 있는
+      XML(eXtensible Mark-up Language)이 관건이 된다. XML 기반의 전자문서는
+      원시자료를 최대한 보존하면서도 인간과 기계가 모두 읽고 처리할 수 있으며,
+      정보 공학 분야 전문가가 아니더라도 누구나 손쉽게 변환할 수 있다. 특히 고전
+      문헌 분야 연구자들의 자료 분석을 통해 새롭게 발굴된 정보 요소들을 자유롭게
+      입력함으로써 지속적인 데이터 관리가 가능하고, 이렇게 만들어진 전자문서는
+      상호 유관한 내용을 담고 있는 자료들이 서로 꼬리에 꼬리를 물고 연결되어,
+      정보 이용자의 지식 획득에도 도움을 줄 수 있다.
+    </p>
+
+    <p>
+      단순히 많은 양의 데이터를 저장하고 저장된 텍스트에 대한 문자열 검색
+      서비스를 제공하는 종래의 고전 자료 DB 수준을 넘어서서, 텍스트 속의 문맥
+      요소를 식별하고 이를 매개로 다른 DB의 관련 자료를 찾아서 제공해 줄 수 있는
+      기능의 발전된 데이터베이스가 필요하다. 이를 시맨틱 데이터베이스라고
+      하는데, 이 모델은 텍스트를 독자의 관심과 요구에 따라 다양한 형태로 편성할
+      수 있게 하고, 이를 통해 효과적으로 텍스트 속의 지식에 접근할 수 있도록
+      한다. 본 연구는 바로 이러한 데이터베이스로 쓰일 데이터를 설계하기 위한
+      것이며, 그 활용 방안을 보여주기 위해 여러 가지 주제로 논어 주석의 인용
+      관계를 네트워크 그래프로 시각화하고자 하는 것이다.
+    </p>
+
+
+
+    <h4>기대효과</h4>
+    <p>
+      특정 경문에 대한 여러 주석의 인용 양상을 체계화하여 데이터로 정리할 수
+      있다면, 네트워크 그래프를 통해 이를 시각화하여 각 주석들간 관점의
+      차이를 파악할 수 있을 것이다. 유가가 한자문화권 전통사상에서 주류의
+      위치를 차지해 왔다는 점에서, 이와 같이 유학경전에 대한 해석학적 관점을
+      살피는 일은 동아시아의 정신사 내지 문명사를 정확하게 이해하는 단초가
+      될 것이다. 지금은 조선시대 논어 주석에 한정되어 있으나, 추후 여러
+      연구자들과 연구방법을 공유함으로써 연구대상을 동아시아 경학으로
+      확장시키고, 시대별ㆍ국가별 주석의 차이를 연구하는 것이 본 연구의 최종
+      목표이다.
+    </p>
+
+  <h4>키워드</h4> 
+    <p> 
+      The Analects of Confucius, Annotation, Citiation, Network Graph, Digital
+      Humanities, Semantic Database
+    </p>
+    <p>논어, 주석, 인용, 네트워크 그래프, 디지털인문학, 시맨틱 데이터베이스</p>
+  </div>
+
+
+    <!-- <h1 align="center">학술논문 발표자료</h1> 
+
+        <table width="80%" 
+        align="center" 
+        height="300" >
+
+          <th>날짜</th>
+          <th>내용</th>
+          <th>논문 및 연구노트</th>
+
+          <tr>
+            <td>2024.07.31</td>
+            <td><a href="https://itkc.jams.or.kr/co/com/EgovMenu.kci?s_url=/sj/search/sjSereClasList.kci&s_MenuId=MENU-000000000053000&accnId=null">한국고전번역원 『민족문화』제67집</a></td>
+            <td><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003105428">(KCI)조선시대 논어주석의 인용 분류체계 -디지털 경전주석학 연구 시론-</a></td>
+          </tr>
+          
+          <tr>
+            <td>2024.08.09</td>
+            <td><a href="https://woohan.jams.or.kr/co/com/EgovMenu.kci?s_url=/po/community/notice/noticeView.kci&s_MenuId=MENU-000000000061000&notiSeq=000000042523">2024년 우리한문학회 하계학술대회</a></td>
+            <td><a href="https://pdfviewer.softgateon.net/?state=%7B%22ids%22:%5B%221fuH7ewCFrRQA_QOCKssVXp6hQil-_cDO%22%5D,%22action%22:%22open%22,%22userId%22:%22109540508334321155655%22,%22resourceKeys%22:%7B%7D%7D">(발표집)조선시대 『논어』주석 인용관계망 연구.pdf</a></td>
+          </tr>
+
+          <tr>
+            <td>2024.08.30</td>
+            <td><a href="https://dh.aks.ac.kr/wiki/index.php/DH_Workshop_2024_08_30">한중연 인문정보학 학위청구논문 예비발표</a></td>
+            <td>학위청구 논문심사 발표문.docs</td>
+          </tr>
+
+          <tr>
+            <td>2024.10.18</td>
+            <td><a href="https://drive.google.com/file/d/10oRyeK9pSuB1y-eaQouWihh6IrLMgWcS/view?usp=sharing">베트남 하노이국립대 학술대회</a></td>
+            <td>제12회 세계한국학대회 발표문.docs</td>
+          </tr>
+
+          <tr>
+            <td>2024.11.30</td>
+            <td><a href="https://sites.google.com/view/dadh2024/home">대만 사범대 DADH 2024 국제학술대회</a></td>
+            <td>(가제)Docusky를 활용한 조선시대 경학자료 인용관계 아카이브.pdf</td>
+          </tr>
+
+          <tr>
+            <td>2024.12.31</td>
+            <td><a href="https://ksq.jams.or.kr/">한국학중앙연구원 『한국학』 제45집 투고</a></td>
+            <td>(가제)한국경학자료시스템 TEI-XML 전자문서 편찬.pdf</td>
+          </tr>
+
+          <tr>
+            <td>2025.01.31</td>
+            <td><a href="https://woohan.jams.or.kr/">단국대 우리한문학회 『한문학보』 제51집 투고</a></td>
+            <td>(가제)조선시대 『논어』 주석 인용관계망 연구.pdf</td>
+          </tr>
+
+          <tr>
+            <td>2025.02.28</td>
+            <td>한중연 인문정보학 학위청구논문 최종심사</td>
+            <td>조선시대 논어 주석의 인용 관계망: 데이터 설계 및 시각화.docs</td>
+          </tr>
+
+        </table>-->
+
+
+
+
+  </body>
+</html>
