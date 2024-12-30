@@ -9,6 +9,9 @@
 <!-- ===============================================  -->
 
 <!ELEMENT teiHeader (fileDesc)>
+<!ATTLIST teiHeader
+  xml:id CDATA #IMPLIED >
+
 <!ELEMENT fileDesc (titleStmt,publicationStmt, sourceDesc)>
 
 <!ELEMENT titleStmt (title+,author)>
@@ -20,6 +23,7 @@
   ko CDATA #REQUIRED>
 <!ELEMENT author (#PCDATA)>
 <!ATTLIST author
+  pid CDATA #IMPLIED
   birth CDATA #REQUIRED
   death CDATA #REQUIRED
   ko CDATA #REQUIRED>
@@ -49,6 +53,7 @@
   ko CDATA #REQUIRED>
 <!ELEMENT date (#PCDATA)>
 
+
 <!-- ===============================================  -->
 <!--    text element                                  -->
 <!-- ===============================================  -->
@@ -58,40 +63,24 @@
   xml:id CDATA #IMPLIED
   xml:lang CDATA #IMPLIED>
   
-<!ELEMENT front (list,head,div)+>
-<!ELEMENT list (item,label?)+>
-<!ELEMENT item (#PCDATA)>
-<!ELEMENT label (#PCDATA)>
+<!ELEMENT front (head+)>
 <!ELEMENT head (#PCDATA)>
 <!ATTLIST head
-  type CDATA #IMPLIED
-  ko CDATA #REQUIRED>
-<!ELEMENT div (#PCDATA)>
-<!ATTLIST div
-  type CDATA #IMPLIED>
-
-<!ELEMENT back (note)+>
-<!ELEMENT note (#PCDATA)>
-<!ATTLIST note
-  place CDATA #IMPLIED
-  type CDATA #IMPLIED
-  ko CDATA #REQUIRED>
+  type (main | sub | chapter) #IMPLIED
+  ko CDATA #IMPLIED
+  n CDATA #IMPLIED>
 
 <!ELEMENT body (head,group+)>
-<!ELEMENT head (#PCDATA)>
-<!ATTLIST head
-  type CDATA #REQUIRED
-  n CDATA #IMPLIED
-  ko CDATA #REQUIRED>
 <!ELEMENT group (div)+>
 <!ATTLIST group
-  xml:id CDATA #REQUIRED
-  type CDATA #REQUIRED
+  xml:id CDATA #IMPLIED
+  type CDATA #IMPLIED
   n CDATA #IMPLIED>
+
 <!ELEMENT div (#PCDATA|quoted)*>
 <!ATTLIST div
-  n CDATA #IMPLIED
-  type (經文 | 中國註釋 | 原註 | 細註 ) #REQUIRED>
+  type CDATA #IMPLIED
+  n CDATA #IMPLIED>
 
 <!ELEMENT quoted (#PCDATA)>
 <!ATTLIST quoted
