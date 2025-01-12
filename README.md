@@ -4,10 +4,12 @@ https://dh.aks.ac.kr/~kimseoyun/101/table_data.html<br/>
 
 데이터 목록<br/>
 
-- 인용관계 데이터 구축 및 탐색
+- 인용관계 데이터 구축 
 1. 인용관계데이터_사변록
 2. 인용관계데이터_녹문집
 3. 인용관계데이터_경사강의
+
+- 네트워크 그래프 시각화 탐색
 4. 피벗테이블_사변록
 5. 피벗테이블_녹문집
 6. 피벗테이블_경사강의
@@ -22,20 +24,21 @@ https://dh.aks.ac.kr/~kimseoyun/101/table_data.html<br/>
 15. Edge List_인용어유무
 16. Edge List_유사도
 17. Edge List_인용형태
-18. Gephi_사변록
-19. Gephi_녹문집
-20. Gephi_경사강의
-21. Gephi_인물간인용관계
-22. Gephi_문헌간인용관계
-23. Gephi_인용목적
-24. Gephi_인용정보
-25. Gephi_인용어유무
-26. Gephi_유사도
-27. Gephi_인용형태
+18. Gephi_전체주석서
+19. Gephi_사변록
+20. Gephi_녹문집
+21. Gephi_경사강의
+22. Gephi_인물간인용관계
+23. Gephi_문헌간인용관계
+24. Gephi_인용목적
+25. Gephi_인용정보
+26. Gephi_인용어유무
+27. Gephi_유사도
+28. Gephi_인용형태
 
 - 인용관계 TEI/XML 전자문서 작성안
-28. teidtd.dtd
-29. tei사변록.xml
+29. teidtd.dtd
+30. tei사변록.xml
 
 논어주석 인용관계 관련 모든 데이터(구글 스프레드시트)<br/>
 https://docs.google.com/spreadsheets/d/11XEQGAJDVS6RtsNmpX-DHuPRbu6K544WAOuP-XQ-Q8U/edit?gid=990621137#gid=990621137
