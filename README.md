@@ -11,26 +11,27 @@ https://dh.aks.ac.kr/~kimseoyun/101/table_data.html<br/>
 4. 피벗테이블_사변록
 5. 피벗테이블_녹문집
 6. 피벗테이블_경사강의
-7. Edge List_사변록
-8. Edge List_녹문집
-9. Edge List_경사강의
-10. Edge List_인물간인용관계
-11. Edge List_문헌간인용관계
-12. Edge List_인용목적
-13. Edge List_인용정보
-14. Edge List_인용어유무
-15. Edge List_유사도
-16. Edge List_인용형태
-17. Gephi_사변록
-18. Gephi_녹문집
-19. Gephi_경사강의
-20. Gephi_인물간인용관계
-21. Gephi_문헌간인용관계
-22. Gephi_인용목적
-23. Gephi_인용정보
-24. Gephi_인용어유무
-25. Gephi_유사도
-26. Gephi_인용형태
+7. Edge List_전체주석서
+8. Edge List_사변록
+9. Edge List_녹문집
+10. Edge List_경사강의
+11. Edge List_인물간인용관계
+12. Edge List_문헌간인용관계
+13. Edge List_인용목적
+14. Edge List_인용정보
+15. Edge List_인용어유무
+16. Edge List_유사도
+17. Edge List_인용형태
+18. Gephi_사변록
+19. Gephi_녹문집
+20. Gephi_경사강의
+21. Gephi_인물간인용관계
+22. Gephi_문헌간인용관계
+23. Gephi_인용목적
+24. Gephi_인용정보
+25. Gephi_인용어유무
+26. Gephi_유사도
+27. Gephi_인용형태
 
 - 인용관계 TEI/XML 전자문서 작성안
 28. teidtd.dtd
