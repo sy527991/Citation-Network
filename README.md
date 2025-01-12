@@ -2,7 +2,9 @@
 A Citation Network of the Joseon Dynasty’s Annotation of the Analects: Data Modeling and Visualization
 https://dh.aks.ac.kr/~kimseoyun/101/table_data.html<br/>
 
-데이터 목록
+데이터 목록<br/>
+
+- 인용관계 데이터 구축 및 탐색
 1. 인용관계데이터_사변록
 2. 인용관계데이터_녹문집
 3. 인용관계데이터_경사강의
@@ -29,8 +31,10 @@ https://dh.aks.ac.kr/~kimseoyun/101/table_data.html<br/>
 24. Gephi_인용어유무
 25. Gephi_유사도
 26. Gephi_인용형태
-27. teidtd.dtd
-28. tei사변록.xml
+
+- 인용관계 TEI/XML 전자문서 작성안
+28. teidtd.dtd
+29. tei사변록.xml
 
 논어주석 인용관계 관련 모든 데이터(구글 스프레드시트)<br/>
 https://docs.google.com/spreadsheets/d/11XEQGAJDVS6RtsNmpX-DHuPRbu6K544WAOuP-XQ-Q8U/edit?gid=990621137#gid=990621137
