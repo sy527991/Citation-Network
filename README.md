@@ -18,6 +18,16 @@ https://dh.aks.ac.kr/~kimseoyun/101/table_data.html
 14. Edge List_인용어유무
 15. Edge List_유사도
 16. Edge List_인용형태
+17. Gephi_사변록
+18. Gephi_녹문집
+19. Gephi_경사강의
+20. Gephi_인물간인용관계
+21. Gephi_문헌간인용관계
+22. Gephi_인용목적
+23. Gephi_인용정보
+24. Gephi_인용어유무
+25. Gephi_유사도
+26. Gephi_인용형태
 
 논어주석 인용관계 관련 모든 데이터(구글 스프레드시트)<br/>
 https://docs.google.com/spreadsheets/d/11XEQGAJDVS6RtsNmpX-DHuPRbu6K544WAOuP-XQ-Q8U/edit?gid=990621137#gid=990621137
