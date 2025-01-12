@@ -25,20 +25,31 @@ https://dh.aks.ac.kr/~kimseoyun/101/table_data.html<br/>
 16. Edge List_유사도
 17. Edge List_인용형태
 18. Gephi_전체주석서
-19. Gephi_사변록
-20. Gephi_녹문집
-21. Gephi_경사강의
-22. Gephi_인물간인용관계
-23. Gephi_문헌간인용관계
-24. Gephi_인용목적
-25. Gephi_인용정보
-26. Gephi_인용어유무
-27. Gephi_유사도
-28. Gephi_인용형태
+19. Gephi_전체주석서_이미지  
+20. Gephi_사변록
+21. Gephi_사변록_이미지
+22. Gephi_녹문집
+23. Gephi_녹문집_이미지
+24. Gephi_경사강의
+25. Gephi_경사강의_이미지 
+26. Gephi_인물간인용관계
+27. Gephi_인물간인용관계_이미지
+28. Gephi_문헌간인용관계
+29. Gephi_문헌간인용관계_이미지
+30. Gephi_인용목적
+31. Gephi_인용목적_이미지
+32. Gephi_인용정보
+33. Gephi_인용정보_이미지
+34. Gephi_인용어유무
+35. Gephi_인용어유무_이미지
+36. Gephi_유사도
+37. Gephi_유사도_이미지
+38. Gephi_인용형태
+39. Gephi_인용형태_이미지
 
 - 인용관계 TEI/XML 전자문서 작성안
-29. teidtd.dtd
-30. tei사변록.xml
+40. teidtd.dtd
+41. tei사변록.xml
 
 논어주석 인용관계 관련 모든 데이터(구글 스프레드시트)<br/>
 https://docs.google.com/spreadsheets/d/11XEQGAJDVS6RtsNmpX-DHuPRbu6K544WAOuP-XQ-Q8U/edit?gid=990621137#gid=990621137
